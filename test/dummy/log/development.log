@@ -1037,3 +1037,29 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.8ms)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+Started GET "/" for 127.0.0.1 at 2018-12-19 01:11:49 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1611ms (Views: 1610.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-19 01:11:51 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_node_info.html.erb (0.4ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (15.9ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (56.3ms)
+Completed 200 OK in 168ms (Views: 146.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/font-awesome.self-2a86d2017f4b74f22943750b3b50b9cb753581bab96cbdaaf2df53f4c04c995b.css?body=1" for 127.0.0.1 at 2018-12-19 01:11:52 -0800
+Started GET "/assets/homeland/bootstrap-theme.self-aa8ae32712abd38196deaa1e5ae9b642650eb25297bd3c3be215847c4d6e2015.css?body=1" for 127.0.0.1 at 2018-12-19 01:11:52 -0800
+Started GET "/assets/homeland/markdown.self-dc2b0c017b6386c7bb753e265b117cefa247ab4214a0ceaed881415b01c6de05.css?body=1" for 127.0.0.1 at 2018-12-19 01:11:52 -0800
+Started GET "/assets/homeland/application.self-3f0d8904a550980c13768f7fe5af6e520ccc7f2941ac049d0ab8644abf4436cb.css?body=1" for 127.0.0.1 at 2018-12-19 01:11:52 -0800
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 127.0.0.1 at 2018-12-19 01:11:52 -0800
