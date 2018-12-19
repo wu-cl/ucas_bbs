@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= @page_title %></title>
-  <%= stylesheet_link_tag    "homeland/application", media: "all" %>
-  <%= javascript_include_tag "homeland/application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  
-  <nav class="navbar navbar-light bg-faded">
+  <head>
+    <title><%= @page_title %></title>
+    <%= stylesheet_link_tag "homeland/application", media: "all" %> 
+    <%= javascript_include_tag "homeland/application" %> <%= csrf_meta_tags %>
+  </head>
+  <body>
+       
+    <!--
     <div class="container">
       <a class="navbar-brand" href="<%= main_app.root_path %>">UCAS-BBS</a>
       <ul class="nav navbar-nav main-nav">
@@ -32,14 +31,59 @@
       </ul>
     </div>
   </nav>
+  !-->
 
-  <div class="main-layout">
-    <div class="container">
-      <%= notice_message %>
+    <div class="header-wrapper">
+      <header>
+        <div class="container">
+          <div class="logo-container">
+            <!-- Website Logo -->
+            <a href="<%= main_app.root_path %>" title="Knowledge Base Theme">
+              <img src="/assets/homeland/logo" alt="Knowledge Base Theme" />
+            </a>
+            <span class="tag-line">BBS For UCASer</span>
+          </div>
 
-      <%= yield %>
+          <!-- Start of Main Navigation -->
+          <nav class="main-nav">
+            <div class="menu-top-menu-container">
+              <ul id="menu-top-menu" class="clearfix">
+                <li><a href="<%= homeland.root_path %>">最新</a></li>
+                <li><a href="<%= homeland.nodes_path %>">板块</a></li>
+                <li><a href="home-categories-articles.html">Home 3</a></li>
+                <li><a href="articles-list.html">Articles List</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li>
+                  <a href="#">Skins</a>
+                  <ul class="sub-menu">
+                    <li class="current-menu-item">
+                      <a href="blue-skin.html">Blue Skin</a>
+                    </li>
+                    <li><a href="green-skin.html">Green Skin</a></li>
+                    <li><a href="red-skin.html">Red Skin</a></li>
+                    <li><a href="index-2.html">Default Skin</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">More</a>
+                  <ul class="sub-menu">
+                    <li><a href="full-width.html">Full Width</a></li>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="page.html">Sample Page</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- End of Main Navigation -->
+        </div>
+      </header>
     </div>
-  </div>
 
-</body>
+   
+    <div class="main-layout">
+      <div class="container"><%= notice_message %> <%= yield %></div>
+    </div>
+  </body>
 </html>

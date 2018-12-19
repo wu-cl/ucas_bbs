@@ -3,6 +3,12 @@
 #= require homeland/tether.min
 #= require homeland/bootstrap.min
 #= require homeland/jquery.timeago
+#= require homeland/jquery.easing.1.34e44
+#= require homeland/prettyphoto/jquery.prettyPhotoaeb9
+#= require homeland/jquery.liveSearchd5f7
+#= require homeland/jflickrfeed
+#= require homeland/jquery.validate.minfc6b
+#= require homeland/custom5152
 #= require_self
 
 window.TopicView =
