@@ -1,0 +1,32 @@
+I"?(function() {
+  window.TopicView = {
+    init: function() {
+      $('[data-action=reply]').off('click.homeland');
+      return $('[data-action=reply]').on('click.homeland', this.replyAction);
+    },
+    replyAction: function(e) {
+      var replyId, replyPanel, target;
+      target = $(e.currentTarget);
+      replyId = target.data('reply-id');
+      replyPanel = $('#reply-panel');
+      replyPanel.addClass('navbar navbar-fixed-bottom navbar-light');
+      replyPanel.show();
+      replyPanel.find('textarea').focus();
+      replyPanel.find('input[name="reply[reply_to_id]"]').val(replyId);
+      return false;
+    }
+  };
+
+  window.Homeland = {
+    init: function() {
+      $("abbr.timeago").timeago();
+      return TopicView.init();
+    }
+  };
+
+  $(document).ready(function() {
+    return Homeland.init();
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,1039 @@
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+  [1m[35m (73.6ms)[0m  [1m[35mCREATE TABLE `homeland_nodes` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `description` varchar(255), `color` varchar(255), `sort` int DEFAULT 0 NOT NULL, `topics_count` int DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE  INDEX `index_homeland_nodes_on_sort` USING btree ON `homeland_nodes` (`sort`) [0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE `homeland_replies` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `topic_id` int, `body` text, `body_html` text, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `reply_to_id` int) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_reply_to_id` USING btree ON `homeland_replies` (`reply_to_id`) [0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_topic_id` USING btree ON `homeland_replies` (`topic_id`) [0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_user_id` USING btree ON `homeland_replies` (`user_id`) [0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE `homeland_topics` (`id` int AUTO_INCREMENT PRIMARY KEY, `node_id` int NOT NULL, `user_id` int NOT NULL, `title` varchar(255) NOT NULL, `body` text, `body_html` text, `last_reply_id` int, `last_reply_user_id` int, `last_active_mark` int DEFAULT 0 NOT NULL, `replied_at` datetime, `replies_count` int DEFAULT 0 NOT NULL, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_deleted_at` USING btree ON `homeland_topics` (`deleted_at`) [0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_last_active_mark_and_deleted_at` USING btree ON `homeland_topics` (`last_active_mark`, `deleted_at`) [0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_node_id_and_deleted_at` USING btree ON `homeland_topics` (`node_id`, `deleted_at`) [0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_node_id_and_last_active_mark` USING btree ON `homeland_topics` (`node_id`, `last_active_mark`) [0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_user_id` USING btree ON `homeland_topics` (`user_id`) [0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` USING btree ON `users` (`email`) [0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` USING btree ON `users` (`reset_password_token`) [0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160322062228')[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160321143003'), ('20160321125035'), ('20160321125610'), ('20160321125920');
+
+[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-12-13 13:44:41', '2018-12-13 13:44:41')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE `homeland_nodes` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `description` varchar(255), `color` varchar(255), `sort` int DEFAULT 0 NOT NULL, `topics_count` int DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE  INDEX `index_homeland_nodes_on_sort` USING btree ON `homeland_nodes` (`sort`) [0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE `homeland_replies` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `topic_id` int, `body` text, `body_html` text, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `reply_to_id` int) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_reply_to_id` USING btree ON `homeland_replies` (`reply_to_id`) [0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_topic_id` USING btree ON `homeland_replies` (`topic_id`) [0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_user_id` USING btree ON `homeland_replies` (`user_id`) [0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE `homeland_topics` (`id` int AUTO_INCREMENT PRIMARY KEY, `node_id` int NOT NULL, `user_id` int NOT NULL, `title` varchar(255) NOT NULL, `body` text, `body_html` text, `last_reply_id` int, `last_reply_user_id` int, `last_active_mark` int DEFAULT 0 NOT NULL, `replied_at` datetime, `replies_count` int DEFAULT 0 NOT NULL, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_deleted_at` USING btree ON `homeland_topics` (`deleted_at`) [0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_last_active_mark_and_deleted_at` USING btree ON `homeland_topics` (`last_active_mark`, `deleted_at`) [0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_node_id_and_deleted_at` USING btree ON `homeland_topics` (`node_id`, `deleted_at`) [0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_node_id_and_last_active_mark` USING btree ON `homeland_topics` (`node_id`, `last_active_mark`) [0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_user_id` USING btree ON `homeland_topics` (`user_id`) [0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` USING btree ON `users` (`email`) [0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` USING btree ON `users` (`reset_password_token`) [0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160322062228')[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160321143003'), ('20160321125035'), ('20160321125610'), ('20160321125920');
+
+[0m
+  [1m[35m (139.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_nodes`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Support' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Support', 'Support', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Bug' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Bug', 'Bug', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Dev' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Dev', 'Dev', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Meta' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Meta', 'Meta', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Feature' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Feature', 'Feature', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Releases' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Releases', 'Releases', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Faq' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Faq', 'Faq', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'HowTo' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('HowTo', 'HowTo', '2018-12-13 13:44:42', '2018-12-13 13:44:42')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('420596978843328840', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('420596978843328840')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_nodes`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_nodes'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_replies`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_replies'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_topics`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_topics'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummary_development'
+  AND fk.table_name = 'homeland_nodes'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummary_development'
+  AND fk.table_name = 'homeland_replies'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummary_development'
+  AND fk.table_name = 'homeland_topics'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummary_development'
+  AND fk.table_name = 'users'
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_nodes`[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+Started GET "/" for 127.0.0.1 at 2018-12-13 05:49:10 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 576ms (Views: 574.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-12-13 05:49:10 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-12-13 05:49:10 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-12-13 05:49:10 -0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2018-12-13 05:49:10 -0800
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 05:49:12 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.4ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (7.4ms)
+Completed 200 OK in 102ms (Views: 85.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/font-awesome.self-a68a433274f8af6a9997bc1ed4076921f48545ebd66d157b04c49e24b0b786f4.css?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/markdown.self-75dfddd7dadb31b4113f8904bc30578e08607542be7588ec8c39ff2fe772c490.css?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/tether.min.self-79d65b033230ec056b02f033f3b3d6f465ab58f04cfabcc062072dd8fc816f9f.css?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/bootstrap-theme.self-ff69fc36a0144d19e0fa72b216b2e7be0caca542b09e561032b499b8170a3164.css?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/application.self-a2eecce3e98291ce4667399545d134978e48b69d79a58105e0bb09c58e30d9e5.css?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/bootstrap.min.self-62e53b6b6850f76348d3162a6b5b512079b96191281848b2884d78233dbf344e.css?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/assets/fontawesome-webfont-7dacf83f51179de8d7980a513e67ab3a08f2c6272bb5946df8fd77c0d1763b73.woff2" for 127.0.0.1 at 2018-12-13 05:49:13 -0800
+Started GET "/homeland/t/features" for 127.0.0.1 at 2018-12-13 05:49:15 -0800
+Processing by Homeland::TopicsController#features as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.3ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (replies_count >= 20) ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (2.9ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homeland/t/recent" for 127.0.0.1 at 2018-12-13 05:49:16 -0800
+Processing by Homeland::TopicsController#recent as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.6ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (11.0ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homeland/nodes" for 127.0.0.1 at 2018-12-13 05:49:17 -0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 8 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/_node.html.erb [8 times] (33.1ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (46.0ms)
+Completed 200 OK in 81ms (Views: 73.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 05:49:18 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.3ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (3.4ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/homeland/t/new" for 127.0.0.1 at 2018-12-13 05:49:19 -0800
+Processing by Homeland::TopicsController#new as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-13 05:49:19 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 42ms (Views: 26.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-13 05:49:22 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homeland/t/features" for 127.0.0.1 at 2018-12-13 05:49:25 -0800
+Processing by Homeland::TopicsController#features as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.3ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (replies_count >= 20) ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (2.8ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homeland/t/features" for 127.0.0.1 at 2018-12-13 05:49:28 -0800
+Processing by Homeland::TopicsController#features as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.3ms)
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (replies_count >= 20) ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (2.8ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/homeland/t/recent" for 127.0.0.1 at 2018-12-13 05:49:28 -0800
+Processing by Homeland::TopicsController#recent as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.6ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (4.6ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homeland/nodes" for 127.0.0.1 at 2018-12-13 05:49:29 -0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 8 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/_node.html.erb [8 times] (35.2ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (39.6ms)
+Completed 200 OK in 74ms (Views: 68.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/homeland/c/5" for 127.0.0.1 at 2018-12-13 05:49:31 -0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (1.7ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (5.0ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 1.0ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('420596978843328840', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('420596978843328840')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_nodes`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_nodes'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_replies`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_replies'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_topics`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_topics'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummary_development'
+  AND fk.table_name = 'homeland_nodes'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummary_development'
+  AND fk.table_name = 'homeland_replies'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummary_development'
+  AND fk.table_name = 'homeland_topics'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummary_development'
+  AND fk.table_name = 'users'
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_nodes`[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+Started GET "/" for 127.0.0.1 at 2018-12-13 05:50:18 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 259ms (Views: 257.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 05:50:20 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.7ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (9.1ms)
+Completed 200 OK in 119ms (Views: 96.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/homeland/t/features" for 127.0.0.1 at 2018-12-13 05:50:22 -0800
+Processing by Homeland::TopicsController#features as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (4.5ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (replies_count >= 20) ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (9.9ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homeland/t/recent" for 127.0.0.1 at 2018-12-13 05:50:23 -0800
+Processing by Homeland::TopicsController#recent as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.4ms)
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (3.4ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/homeland/nodes" for 127.0.0.1 at 2018-12-13 05:50:23 -0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 8 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/_node.html.erb [8 times] (42.6ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (54.1ms)
+Completed 200 OK in 80ms (Views: 73.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/homeland/t/features" for 127.0.0.1 at 2018-12-13 05:50:27 -0800
+Processing by Homeland::TopicsController#features as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.4ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (replies_count >= 20) ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (3.5ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 05:50:27 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.3ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (3.1ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homeland/t/new" for 127.0.0.1 at 2018-12-13 05:50:29 -0800
+Processing by Homeland::TopicsController#new as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-13 05:50:29 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 37ms (Views: 24.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-12-13 05:50:31 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-13 05:50:46 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPYioZVPAB1Y2dXbGzxtvs9Ot6oBO7II7oWS0luyCF8kvvTQP80nkr7fCMB2BB+pVLp4tTxkOvdmSj6C7GnAbw==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '222@11.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('222@11.com', '$2a$10$SERpc6Aua2gVQq1nTt8f0.jIQt0N4y3g4E3THiwGluknJ7d6H30qW', '2018-12-13 13:50:46', '2018-12-13 13:50:46')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2018-12-13 13:50:46', `last_sign_in_at` = '2018-12-13 13:50:46', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/homeland/t/new
+Completed 302 Found in 105ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/homeland/t/new" for 127.0.0.1 at 2018-12-13 05:50:46 -0800
+Processing by Homeland::TopicsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` IS NULL LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/new.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes`[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_form.html.erb (8.4ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/new.html.erb within layouts/homeland/application (10.8ms)
+Completed 200 OK in 61ms (Views: 46.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/homeland/t" for 127.0.0.1 at 2018-12-13 05:50:51 -0800
+Processing by Homeland::TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EjqZphozpJWZJMrXfdneb19uHPrKw0tDUrep5vDD4Qj2ck/XsLGDGn8iF8wQ4ax4xJrT5fecw7zaeAW2RxgpOA==", "topic"=>{"node_id"=>"1", "title"=>"111", "body"=>"111"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_topics` (`node_id`, `user_id`, `title`, `body`, `body_html`, `last_active_mark`, `created_at`, `updated_at`) VALUES (1, 1, '111', '111', '<p>111</p>\n', 1544709051, '2018-12-13 13:50:51', '2018-12-13 13:50:51')[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `homeland_nodes` SET `topics_count` = COALESCE(`topics_count`, 0) + 1 WHERE `homeland_nodes`.`id` = 1[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/homeland/t/1
+Completed 302 Found in 101ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 05:50:51 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (8.1ms)
+  [1m[36mHomeland::Reply Load (0.3ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (23.1ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (38.4ms)
+Completed 200 OK in 81ms (Views: 68.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (7.0ms)
+  [1m[36mHomeland::Reply Load (0.5ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (1.7ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (14.4ms)
+Completed 200 OK in 44ms (Views: 37.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/font-awesome.self-a68a433274f8af6a9997bc1ed4076921f48545ebd66d157b04c49e24b0b786f4.css?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/markdown.self-75dfddd7dadb31b4113f8904bc30578e08607542be7588ec8c39ff2fe772c490.css?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/tether.min.self-79d65b033230ec056b02f033f3b3d6f465ab58f04cfabcc062072dd8fc816f9f.css?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/application.self-a2eecce3e98291ce4667399545d134978e48b69d79a58105e0bb09c58e30d9e5.css?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/bootstrap-theme.self-ff69fc36a0144d19e0fa72b216b2e7be0caca542b09e561032b499b8170a3164.css?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/bootstrap.min.self-62e53b6b6850f76348d3162a6b5b512079b96191281848b2884d78233dbf344e.css?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2018-12-13 05:50:53 -0800
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 05:50:55 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.4ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (1.1ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (4.9ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (15.4ms)
+Completed 200 OK in 43ms (Views: 38.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-13 05:50:56 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+Started GET "/" for 127.0.0.1 at 2018-12-13 05:51:05 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 274ms (Views: 272.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 05:51:06 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.4ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.3ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (32.2ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (70.9ms)
+Completed 200 OK in 197ms (Views: 147.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/homeland/t/features" for 127.0.0.1 at 2018-12-13 05:51:08 -0800
+Processing by Homeland::TopicsController#features as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.6ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (replies_count >= 20) ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (3.9ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homeland/t/recent" for 127.0.0.1 at 2018-12-13 05:51:09 -0800
+Processing by Homeland::TopicsController#recent as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (1.7ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (10.0ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/homeland/nodes" for 127.0.0.1 at 2018-12-13 05:51:09 -0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 8 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/_node.html.erb [8 times] (36.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (41.9ms)
+Completed 200 OK in 68ms (Views: 62.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 05:51:28 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.3ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.3ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (2.8ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (8.0ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-13 05:51:29 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 05:51:30 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.3ms)
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (4.6ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (9.9ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 1.1ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/wcl/Desktop/ruby_rails/homeland/test/dummy/config/environment.rb:6)
+Started GET "/" for 127.0.0.1 at 2018-12-13 21:31:20 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (4.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 1437ms (Views: 1420.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-12-13 21:31:22 -0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2018-12-13 21:31:22 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-12-13 21:31:22 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-12-13 21:31:22 -0800
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (30.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (1.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (42.9ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (187.9ms)
+Completed 200 OK in 550ms (Views: 412.2ms | ActiveRecord: 37.7ms)
+
+
+Started GET "/assets/font-awesome.self-a68a433274f8af6a9997bc1ed4076921f48545ebd66d157b04c49e24b0b786f4.css?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/tether.min.self-79d65b033230ec056b02f033f3b3d6f465ab58f04cfabcc062072dd8fc816f9f.css?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/bootstrap-theme.self-ff69fc36a0144d19e0fa72b216b2e7be0caca542b09e561032b499b8170a3164.css?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/markdown.self-75dfddd7dadb31b4113f8904bc30578e08607542be7588ec8c39ff2fe772c490.css?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/bootstrap.min.self-62e53b6b6850f76348d3162a6b5b512079b96191281848b2884d78233dbf344e.css?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/application.self-a2eecce3e98291ce4667399545d134978e48b69d79a58105e0bb09c58e30d9e5.css?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2018-12-13 21:31:24 -0800
+Started GET "/assets/fontawesome-webfont-7dacf83f51179de8d7980a513e67ab3a08f2c6272bb5946df8fd77c0d1763b73.woff2" for 127.0.0.1 at 2018-12-13 21:31:25 -0800
+Started GET "/homeland/t/features" for 127.0.0.1 at 2018-12-13 21:31:27 -0800
+Processing by Homeland::TopicsController#features as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.5ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (replies_count >= 20) ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (4.5ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/homeland/t/recent" for 127.0.0.1 at 2018-12-13 21:31:27 -0800
+Processing by Homeland::TopicsController#recent as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.3ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (1.5ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (8.5ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/homeland/nodes" for 127.0.0.1 at 2018-12-13 21:31:28 -0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 8 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/_node.html.erb [8 times] (79.8ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (85.5ms)
+Completed 200 OK in 110ms (Views: 104.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/homeland/c/1" for 127.0.0.1 at 2018-12-13 21:31:31 -0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (2.1ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (1.4ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (9.9ms)
+Completed 200 OK in 67ms (Views: 37.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 21:31:32 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (5.3ms)
+  [1m[36mHomeland::Reply Load (0.5ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (58.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (81.3ms)
+Completed 200 OK in 157ms (Views: 109.0ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-13 21:31:34 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (6.1ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.4ms)
+Started POST "/homeland/t/1/reply" for 127.0.0.1 at 2018-12-13 21:31:40 -0800
+Processing by Homeland::TopicsController#reply as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9OfrPgE0EfZ1a/WA0vIwPPRtTcaMH3z5233u1H5D7D2TTp0Hkt/3+Z0/pSef9Rsx4H+3tDHo8dmNA0p5aJ9GrQ==", "reply"=>{"reply_to_id"=>"", "body"=>"4523452345"}, "id"=>"1"}
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-13 21:31:40 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 85ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-13 21:31:47 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kyScCkMNCLvdhmzaPyiwN9wKd5hvAP+7Cw5kzRcTV3r0jeoz0ObutDXSPH1yL5s6yBiN6tL3cptdcMBgAc/96g==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-12-14 05:31:47', `sign_in_count` = 2, `updated_at` = '2018-12-14 05:31:47' WHERE `users`.`id` = 1[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 181ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-13 21:31:47 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homeland/" for 127.0.0.1 at 2018-12-13 21:31:49 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_node_info.html.erb (0.5ms)
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_topic.html.erb [1 times] (3.7ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/index.html.erb within layouts/homeland/application (9.3ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 21:31:56 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.3ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (4.9ms)
+  [1m[36mHomeland::Reply Load (0.5ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (1.8ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (12.0ms)
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/homeland/t/1/reply" for 127.0.0.1 at 2018-12-13 21:31:58 -0800
+Processing by Homeland::TopicsController#reply as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RQZJzTZS1+en955E9GM35KlcFl3pktZ/Ecn54VUb3rjzzoK7IIksrigKdu4HsTMH7iQFT3p2EUnO9NYbo1U2Sg==", "reply"=>{"reply_to_id"=>"", "body"=>"111"}, "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Topic Load (0.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `homeland_replies` (`user_id`, `topic_id`, `body`, `body_html`, `created_at`, `updated_at`) VALUES (1, 1, '111', '<p>111</p>\n', '2018-12-14 05:31:58', '2018-12-14 05:31:58')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (15.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE `homeland_topics` SET `replied_at` = '2018-12-14 05:31:58', `last_active_mark` = 1544765518, `last_reply_user_id` = 1, `replies_count` = 1, `updated_at` = '2018-12-14 05:31:58' WHERE `homeland_topics`.`id` = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/homeland/t/1#reply
+Completed 302 Found in 284ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 21:31:58 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (5.4ms)
+  [1m[36mHomeland::Reply Load (0.4ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb [1 times] (1.8ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (2.9ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (20.2ms)
+Completed 200 OK in 51ms (Views: 45.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/homeland/t/1/reply" for 127.0.0.1 at 2018-12-13 21:32:01 -0800
+Processing by Homeland::TopicsController#reply as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ozEXrFBYrYxO8/uiVfPEkHnKrDGN0n2rAirZHcnuu7wV+dzaRoNWxcEOEwimIcBzPrK/Ix42up3dF/bnP6BTTg==", "reply"=>{"reply_to_id"=>"", "body"=>"2234234234"}, "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `homeland_replies` (`user_id`, `topic_id`, `body`, `body_html`, `created_at`, `updated_at`) VALUES (1, 1, '2234234234', '<p>2234234234</p>\n', '2018-12-14 05:32:01', '2018-12-14 05:32:01')[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE `homeland_topics` SET `replied_at` = '2018-12-14 05:32:01', `last_active_mark` = 1544765521, `replies_count` = 2, `updated_at` = '2018-12-14 05:32:01' WHERE `homeland_topics`.`id` = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/homeland/t/1#reply
+Completed 302 Found in 28ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 21:32:01 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (4.9ms)
+  [1m[36mHomeland::Reply Load (0.5ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb [2 times] (3.2ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (1.6ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (20.0ms)
+Completed 200 OK in 58ms (Views: 52.7ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/homeland/t/1/reply" for 127.0.0.1 at 2018-12-13 21:32:07 -0800
+Processing by Homeland::TopicsController#reply as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"By4oZGJgaoKGMRRuvEK9AzVXYdoiXpntEToARfAzK9mx5uMSdLuRywnM/MRPkLngci9yyLG6XtvOBy+/Bn3DKw==", "reply"=>{"reply_to_id"=>"1", "body"=>"234234"}, "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_replies` (`user_id`, `topic_id`, `body`, `body_html`, `created_at`, `updated_at`, `reply_to_id`) VALUES (1, 1, '234234', '<p>234234</p>\n', '2018-12-14 05:32:07', '2018-12-14 05:32:07', 1)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `homeland_topics` SET `replied_at` = '2018-12-14 05:32:07', `last_active_mark` = 1544765527, `replies_count` = 3, `updated_at` = '2018-12-14 05:32:07' WHERE `homeland_topics`.`id` = 1[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/homeland/t/1#reply
+Completed 302 Found in 20ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 21:32:07 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (5.6ms)
+  [1m[36mHomeland::Reply Load (0.5ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb [3 times] (3.8ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (1.6ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (21.3ms)
+Completed 200 OK in 51ms (Views: 44.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/homeland/t/1/reply" for 127.0.0.1 at 2018-12-13 21:32:12 -0800
+Processing by Homeland::TopicsController#reply as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rubQ/mMSAKsg7IQA3zE3OqMaU6zLxc9J0n3PONobbjoYLhuIdcn74q8RbKos4zPZ5GJAvlghCH8NQODCLFWGyA==", "reply"=>{"reply_to_id"=>"1", "body"=>"234234234"}, "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_replies` (`user_id`, `topic_id`, `body`, `body_html`, `created_at`, `updated_at`, `reply_to_id`) VALUES (1, 1, '234234234', '<p>234234234</p>\n', '2018-12-14 05:32:12', '2018-12-14 05:32:12', 1)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `homeland_topics` SET `replied_at` = '2018-12-14 05:32:12', `last_active_mark` = 1544765532, `replies_count` = 4, `updated_at` = '2018-12-14 05:32:12' WHERE `homeland_topics`.`id` = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/homeland/t/1#reply
+Completed 302 Found in 19ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 21:32:12 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (4.8ms)
+  [1m[36mHomeland::Reply Load (0.4ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb [4 times] (3.9ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (1.7ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (18.8ms)
+Completed 200 OK in 45ms (Views: 39.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/homeland/t/1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb (5.4ms)
+  [1m[36mHomeland::Reply Load (0.5ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/replies/_reply.html.erb [4 times] (3.7ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/_reply_form.html.erb (1.8ms)
+  Rendered /home/wcl/Desktop/ruby_rails/homeland/app/views/homeland/topics/show.html.erb within layouts/homeland/application (19.1ms)
+Completed 200 OK in 49ms (Views: 43.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/font-awesome.self-a68a433274f8af6a9997bc1ed4076921f48545ebd66d157b04c49e24b0b786f4.css?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/bootstrap.min.self-62e53b6b6850f76348d3162a6b5b512079b96191281848b2884d78233dbf344e.css?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/application.self-a2eecce3e98291ce4667399545d134978e48b69d79a58105e0bb09c58e30d9e5.css?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/markdown.self-75dfddd7dadb31b4113f8904bc30578e08607542be7588ec8c39ff2fe772c490.css?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/bootstrap-theme.self-ff69fc36a0144d19e0fa72b216b2e7be0caca542b09e561032b499b8170a3164.css?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/tether.min.self-79d65b033230ec056b02f033f3b3d6f465ab58f04cfabcc062072dd8fc816f9f.css?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2018-12-13 21:32:15 -0800
+Started GET "/users/1" for 127.0.0.1 at 2018-12-13 21:32:18 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (4.6ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.8ms)
