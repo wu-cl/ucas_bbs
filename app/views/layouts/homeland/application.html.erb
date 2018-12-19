@@ -10,10 +10,10 @@
   
   <nav class="navbar navbar-light bg-faded">
     <div class="container">
-      <a class="navbar-brand" href="<%= main_app.root_path %>"><%= t('homeland.nav.home') %></a>
+      <a class="navbar-brand" href="<%= main_app.root_path %>">UCAS-BBS</a>
       <ul class="nav navbar-nav main-nav">
         <li class="nav-item<%= ' active' if controller_name == 'topics' and action_name == 'index' %>">
-          <a class="nav-link" href="<%= homeland.root_path %>"><%= t('homeland.nav.latest') %></a>
+          <a class="nav-link" href="<%= homeland.root_path %>">最新</a>
         </li>
         <li class="nav-item<%= ' active' if controller_name == 'topics' and action_name == 'features' %>">
           <a class="nav-link" href="<%= homeland.features_topics_path %>"><%= t('homeland.nav.features') %></a>
@@ -22,7 +22,7 @@
           <a class="nav-link" href="<%= homeland.recent_topics_path %>"><%= t('homeland.nav.recent') %></a>
         </li>
         <li class="nav-item<%= ' active' if controller_name == 'nodes' %>">
-          <a class="nav-link" href="<%= homeland.nodes_path %>"><%= t('homeland.nav.node') %></a>
+          <a class="nav-link" href="<%= homeland.nodes_path %>">板块</a>
         </li>
       </ul>
       <ul class="nav navbar-nav pull-xs-right">
