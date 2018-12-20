@@ -1,6 +1,7 @@
 <%
 is_reply = reply.respond_to?(:reply_to_id)
 %>
+<!--
 <div class="reply media" id="reply-<%= reply.id %>" data-id="<%= reply.id %>">
   <div class="media-left">
     <%= user_avatar_tag(reply) %>
@@ -33,3 +34,34 @@ is_reply = reply.respond_to?(:reply_to_id)
     </div>
   </div>
 </div>
+-->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-4">
+        <article id="comment-4">
+
+                <a href="#">
+                        <%= user_avatar_tag(reply) %>
+                </a>
+
+                <div class="comment-meta">
+
+                        <h5 class="author">
+                                <cite class="fn"><a href="#" rel="external nofollow" class="url"><%= user_name_tag(reply) %></a></cite>
+                        </h5>
+
+                        <p class="date">
+                                <a href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/#comment-4">
+                                        <time><%= timeago reply.created_at %></time>
+                                </a>
+                        </p>
+
+                </div>
+
+                <div class="comment-body">
+                  <div class="markdown">
+                    <%= raw reply.body_html %>
+                  </div>
+                </div><!-- end of comment-body -->
+
+        </article><!-- end of comment -->
+</li>

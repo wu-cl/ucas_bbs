@@ -4,13 +4,15 @@ module Homeland
 
     def render_errors(target)
       if target.errors.present?
-        render partial: '/homeland/shared/error_messages', locals: { target: target }
+        render partial: '/shared/error_messages', locals: { target: target }
       end
     end
 
-    def timeago(time, options = {})
-      options[:class] ||= "timeago"
-      content_tag(:abbr, time.to_s, options.merge(:title => time.getutc.iso8601)) if time
+    #def timeago(time, options = {})
+    def timeago(time)
+      #options[:class] ||= "timeago"
+      #content_tag(:abbr, time.to_s, options.merge(:title => time.getutc.iso8601)) if time
+      content_tag(:abbr, time.to_s) if time
     end
 
     def node_tag(node)

@@ -7,7 +7,7 @@ module Homeland
 
     def index
       @topics = Topic.latest.includes(:user).page(params[:page])
-
+      @topics_reply = Topic.reply_index.includes(:user).page(params[:page])
       set_seo_meta(t("homeland.nav.latest"))
     end
 

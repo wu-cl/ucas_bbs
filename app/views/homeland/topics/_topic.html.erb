@@ -11,11 +11,8 @@
 <li class="article-entry standard">
   <h4><%= link_to topic.title, homeland.topic_path(topic) %></h4>
   <span class="article-meta">
-    WCL in
-    <a href="#" title="View all posts in"
-      ><%= node_tag(topic.node) %></a
-    ></span
+  <%= timeago topic.activity_at %> in
+    <a href="#" title="View all posts in"><%= node_tag(topic.node) %></a></span
   >
   <span class="like-count"><%= topic.replies_count %></span>
 </li>
-

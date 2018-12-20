@@ -1,21 +1,121 @@
-<div class="row">
-  <div class="topic-detail col-lg-9">
-    <h1>
-      <%= @topic.title %>
-      <%= node_tag(@topic.node) %>
-    </h1>
+<div class="page-container">
+  <div class="container">
 
-    <div class="topic-content">
-      <%= render partial: 'homeland/replies/reply', locals: { reply: @topic } %>
+    <div class="row">
+
+      <!-- start of page content -->
+      <div class="span8 page-content">
+
+        <ul class="breadcrumb">
+          <li>
+            <a href="#" title=""><%= node_tag(@topic.node) %></a>
+            <span class="divider">/</span></li>
+          <li class="active"><%= @topic.title %></li>
+        </ul>
+
+        <article class=" type-post format-standard hentry clearfix">
+
+          <h1 class="post-title">
+            <a href="#"><%= @topic.title %></a>
+          </h1>
+
+          <div class="post-meta clearfix">
+            <span class="date"><%= timeago @topic.activity_at %></span>
+            <span class="category">
+              <a href="#" title=""><%= node_tag(@topic.node) %></a>
+            </span>
+            <span class="comments">
+              <a href="#" title=""><%= @topic.replies_count %>
+                Comments</a>
+            </span>
+          </div>
+          <!-- end of post meta -->
+
+          <%= render partial: 'homeland/replies/topic_body', locals: { reply: @topic } %>
+        </article>
+
+        <section id="comments">
+
+          <h3 id="comments-title">(3) Comments</h3>
+
+          <ol class="commentlist">
+
+            <%= render @replies %>
+
+          </ol>
+
+          <div id="respond">
+
+            <h3>Leave a Reply</h3>
+
+            <div class="cancel-comment-reply">
+              <a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display:none;">Click here to cancel reply.</a>
+            </div>
+
+            <%= render 'reply_form' %>
+
+          </div>
+
+        </section>
+        <!-- end of comments -->
+
+      </div>
+      <!-- end of page content -->
+
+      <!-- start of sidebar -->
+      <aside class="span4 page-sidebar">
+
+        <section class="widget">
+          <div class="support-widget">
+            <h3 class="title">Support</h3>
+            <p class="intro">Need more support? If you did not found an answer, contact us for further help.</p>
+          </div>
+        </section>
+
+        <section class="widget">
+          <h3 class="title">Featured Articles</h3>
+          <ul class="articles">
+            <li class="article-entry standard">
+              <h4>
+                <a href="single.html">Integrating WordPress with Your Website</a>
+              </h4>
+              <span class="article-meta">25 Feb, 2013 in
+                <a href="#" title="View all posts in Server &amp; Database">Server &amp; Database</a>
+              </span>
+              <span class="like-count">66</span>
+            </li>
+
+          </section>
+
+          <section class="widget">
+            <h3 class="title">Categories</h3>
+            <ul>
+              <li>
+                <a href="#" title="Lorem ipsum dolor sit amet,">Advanced Techniques</a>
+              </li>
+              <li>
+                <a href="#" title="Lorem ipsum dolor sit amet,">Designing in WordPress</a>
+              </li>
+
+            </ul>
+          </section>
+
+          <section class="widget">
+            <h3 class="title">Recent Comments</h3>
+            <ul id="recentcomments">
+              <li class="recentcomments">
+                <a href="#" rel="external nofollow" class="url">John Doe</a>
+                on
+                <a href="#">Integrating WordPress with Your Website</a>
+              </li>
+              <li class="recentcomments">saqib sarwar on
+                <a href="#">Integrating WordPress with Your Website</a>
+              </li>
+            </ul>
+          </section>
+
+        </aside>
+        <!-- end of sidebar -->
+      </div>
     </div>
-
-    <div class="replies">
-      <%= render @replies %>
-    </div>
-
   </div>
-
-
-</div>
-
-<%= render 'reply_form' %>

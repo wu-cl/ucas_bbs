@@ -1,0 +1,7 @@
+<%
+is_reply = reply.respond_to?(:reply_to_id)
+%>
+
+  <div class="markdown">
+    <%= raw reply.body_html %>
+  </div>

@@ -8,7 +8,7 @@ a:hover {
 }
 
 blockquote {
-  background: whitesmoke url("../images/quote.png") no-repeat 20px 25px;
+  background: whitesmoke url("quote.png") no-repeat 20px 25px;
   border: 1px solid #e8e8e8;
   padding: 20px 20px 20px 60px;
   color: #6f7579;
@@ -141,7 +141,7 @@ span.tag-line {
 
 /* Header - Search ---------------------------------------------------------------------------------------------------*/
 .search-area-wrapper {
-  background: #353b65 url("../images/main-bg.jpg") center top no-repeat;
+  background: #353b65 url("main-bg.jpg") center top no-repeat;
   background-size: 100%;
   min-height: 279px;
   height: auto !important;
@@ -191,7 +191,7 @@ form.search-form input.search-term {
   margin-bottom: 0;
 }
 form.search-form input.search-term.loading {
-  background-image: url("../images/search-loader.gif");
+  background-image: url("search-loader.gif");
   background-repeat: no-repeat;
   background-position: 98% 50%;
 }
@@ -356,6 +356,11 @@ a img.aligncenter {
   margin: 10px 0 0;
   padding: 20px 0 0;
 }
+
+.commentlist li.comment .comment-body{
+  padding-left: 55px;
+}
+
 .commentlist li.comment article {
   *zoom: 1;
   padding-bottom: 20px;
@@ -373,9 +378,11 @@ a img.aligncenter {
 }
 
 li.comment > article .avatar {
+  height:6%;
+  width:6%;
   background: #fff;
   float: left;
-  margin: 0px 10px 10px 0;
+  margin: 14px 10px 10px 0;
   position: relative;
   z-index: 1;
   -webkit-border-radius: 60px;
@@ -430,7 +437,7 @@ li.comment > article .avatar {
 .widget ul li {
   list-style: none;
   padding: 8px 8px 8px 23px;
-  background: url("../images/li-arrow.png") no-repeat 8px 15px;
+  background: url("li-arrow.png") no-repeat 8px 15px;
   border-bottom: 1px solid #f2f2f2;
 }
 .widget ul li:last-child {
@@ -444,7 +451,7 @@ li.comment > article .avatar {
 .support-widget {
   border: 1px solid #e9e6c4;
   padding: 10px 100px 10px 20px;
-  background: #fefbdc url("../images/support.png") no-repeat 95% 20px;
+  background: #fefbdc url("support.png") no-repeat 95% 20px;
   margin-bottom: 20px;
 }
 .support-widget h3 {
@@ -497,7 +504,7 @@ li.comment > article .avatar {
 .top-cats h4.category {
   margin: 9px 0;
   padding: 2px 0 2px 30px;
-  background: url("../images/category-main-icon.png") no-repeat 0 0;
+  background: url("category-main-icon.png") no-repeat 0 0;
   font-weight: 600;
 }
 
@@ -529,19 +536,19 @@ ul.articles .article-entry {
   position: relative;
   border-bottom: 1px solid #f2f2f2;
   padding: 0 0 0 24px;
-  background: url("../images/standard.png") no-repeat 0 3px;
+  background: url("standard.png") no-repeat 0 3px;
 }
 ul.articles .article-entry.standard {
-  background: url("../images/standard.png") no-repeat 0 3px;
+  background: url("standard.png") no-repeat 0 3px;
 }
 ul.articles .article-entry.video {
-  background: url("../images/video.png") no-repeat 0 3px;
+  background: url("video.png") no-repeat 0 3px;
 }
 ul.articles .article-entry.image {
-  background: url("../images/image.png") no-repeat 0 3px;
+  background: url("image.png") no-repeat 0 3px;
 }
 ul.articles .article-entry.gallery {
-  background: url("../images/image.png") no-repeat 0 3px;
+  background: url("image.png") no-repeat 0 3px;
 }
 ul.articles li.article-entry:last-child {
   border-bottom: 1px solid #f2f2f2;
@@ -571,10 +578,10 @@ ul.articles li.article-entry:last-child {
   padding: 3px 5px 3px 20px;
   border: 1px solid #f2f2f2;
   border-bottom: none;
-  background: url("../images/like.png") no-repeat 6px 8px;
+  background: url("like.png") no-repeat 6px 8px;
 }
 .article-entry:hover .like-count {
-  background: url("../images/like.png") no-repeat 6px -22px;
+  background: url("like.png") no-repeat 6px -22px;
   color: #395996;
 }
 
@@ -610,23 +617,23 @@ ul.articles li.article-entry:last-child {
   line-height: 22px;
 }
 .hentry .post-meta .date {
-  background: url("../images/calendar-icon.png") no-repeat left center;
+  background: url("calendar-icon.png") no-repeat left center;
 }
 .hentry .post-meta .category {
-  background: url("../images/category-icon.png") no-repeat left center;
+  background: url("category-icon.png") no-repeat left center;
 }
 .hentry .post-meta .author {
-  background: url("../images/user.png") no-repeat left center;
+  background: url("user.png") no-repeat left center;
 }
 .hentry .post-meta .comments {
-  background: url("../images/comment.png") no-repeat left center;
+  background: url("comment.png") no-repeat left center;
 }
 .hentry .post-meta .like-count {
   float: right;
-  background: url("../images/like.png") no-repeat 4px 6px;
+  background: url("like.png") no-repeat 4px 6px;
 }
 .hentry .post-meta .like-count:hover {
-  background: url("../images/like.png") no-repeat 4px -24px;
+  background: url("like.png") no-repeat 4px -24px;
   color: #395996;
 }
 
@@ -636,7 +643,7 @@ ul.articles li.article-entry:last-child {
   line-height: 20px;
   padding: 5px 13px;
   padding-left: 25px;
-  background: #fafafa url("../images/like-btn.png") no-repeat 10px -20px;
+  background: #fafafa url("like-btn.png") no-repeat 10px -20px;
   cursor: pointer;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -644,20 +651,20 @@ ul.articles li.article-entry:last-child {
   color: #8cd24e;
 }
 .like-btn .like-it:hover {
-  background: #b6b6b6 url("../images/like-btn.png") no-repeat 10px 10px;
+  background: #b6b6b6 url("like-btn.png") no-repeat 10px 10px;
   color: #fff;
 }
 .like-btn .like-it.already-voted {
   cursor: default;
 }
 .like-btn .like-it.already-voted:hover {
-  background: #fafafa url("../images/like-btn.png") no-repeat 10px -20px;
+  background: #fafafa url("like-btn.png") no-repeat 10px -20px;
   color: #8cd24e;
 }
 
 .hentry.type-post .post-title {
   padding-left: 35px;
-  background: url("../images/standard-large.png") no-repeat 0 3px;
+  background: url("standard-large.png") no-repeat 0 3px;
   font-size: 20px;
   line-height: 30px;
 }
@@ -676,15 +683,15 @@ ul.articles li.article-entry:last-child {
 }
 
 .hentry.format-image .post-title {
-  background: url("../images/image-large.png") no-repeat 0 3px;
+  background: url("image-large.png") no-repeat 0 3px;
 }
 
 .hentry.format-video .post-title {
-  background: url("../images/video-large.png") no-repeat 0 3px;
+  background: url("video-large.png") no-repeat 0 3px;
 }
 
 .faq.hentry .post-title {
-  background: url("../images/question-large.png") no-repeat 0 5px;
+  background: url("question-large.png") no-repeat 0 5px;
   padding-left: 30px;
 }
 
@@ -757,7 +764,7 @@ h1.search-title span {
 #live-search-results .search-result {
   position: relative;
   padding: 10px 10px 10px 35px;
-  background-image: url("../images/standard.png");
+  background-image: url("standard.png");
   background-repeat: no-repeat;
   background-position: 10px 13px;
 }
@@ -771,19 +778,19 @@ h1.search-title span {
   font-weight: 600;
 }
 #live-search-results .search-result.standard {
-  background-image: url("../images/standard.png");
+  background-image: url("standard.png");
 }
 #live-search-results .search-result.video {
-  background-image: url("../images/video.png");
+  background-image: url("video.png");
 }
 #live-search-results .search-result.image {
-  background-image: url("../images/image.png");
+  background-image: url("image.png");
 }
 #live-search-results .search-result.gallery {
-  background-image: url("../images/image.png");
+  background-image: url("image.png");
 }
 #live-search-results .search-result.faq {
-  background-image: url("../images/question.png");
+  background-image: url("question.png");
 }
 #live-search-results .no-result {
   padding: 10px 10px 10px 10px;
@@ -800,10 +807,10 @@ h1.search-title span {
   line-height: 18px;
   font-weight: 600;
   padding: 3px 5px 3px 20px;
-  background: url("../images/like.png") no-repeat 6px 8px;
+  background: url("like.png") no-repeat 6px 8px;
 }
 #live-search-results .search-result:hover .like-count {
-  background: url("../images/like.png") no-repeat 6px -22px;
+  background: url("like.png") no-repeat 6px -22px;
   color: #395996;
 }
 
@@ -816,7 +823,7 @@ h1.search-title span {
 }
 
 .faq-icon {
-  background-image: url("../images/faq-plus.png");
+  background-image: url("faq-plus.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
@@ -829,7 +836,7 @@ h1.search-title span {
 }
 
 .faq-item.active .faq-icon {
-  background-image: url("../images/faq-minus.png");
+  background-image: url("faq-minus.png");
 }
 
 .faq-item.active {
@@ -897,7 +904,7 @@ input[type=text].error,
 /* Footer ------------------------------------------------------------------------------------------------------------*/
 #footer-wrapper {
   width: 100%;
-  background: url("../images/footer-bg.png");
+  background: url("footer-bg.png");
 }
 #footer-wrapper > #footer {
   padding: 20px 35px;
@@ -1000,31 +1007,31 @@ input[type=text].error,
   height: 30px;
 }
 .social-nav li.facebook a {
-  background: url(../images/facebook.png) no-repeat 0 0;
+  background: url(facebook.png) no-repeat 0 0;
 }
 .social-nav li.deviantart a {
-  background: url(../images/devine-art.png) no-repeat 0 0;
+  background: url(devine-art.png) no-repeat 0 0;
 }
 .social-nav li.flickr a {
-  background: url(../images/flickr.png) no-repeat 0 0;
+  background: url(flickr.png) no-repeat 0 0;
 }
 .social-nav li.google a {
-  background: url(../images/google.png) no-repeat 0 0;
+  background: url(google.png) no-repeat 0 0;
 }
 .social-nav li.linkedin a {
-  background: url(../images/linked-in.png) no-repeat 0 0;
+  background: url(linked-in.png) no-repeat 0 0;
 }
 .social-nav li.rss a {
-  background: url(../images/rss.png) no-repeat 0 0;
+  background: url(rss.png) no-repeat 0 0;
 }
 .social-nav li.skype a {
-  background: url(../images/skype.png) no-repeat 0 0;
+  background: url(skype.png) no-repeat 0 0;
 }
 .social-nav li.stumble a {
-  background: url(../images/stumble.png) no-repeat 0 0;
+  background: url(stumble.png) no-repeat 0 0;
 }
 .social-nav li.twitter a {
-  background: url(../images/twitter.png) no-repeat 0 0;
+  background: url(twitter.png) no-repeat 0 0;
 }
 .social-nav li > a:hover {
   background-position: 0 -40px;
@@ -1061,7 +1068,7 @@ input[type=text].error,
   display: block;
   width: 17px;
   height: 17px;
-  background: url(../images/plus-minus.png) no-repeat 0px 0px;
+  background: url(plus-minus.png) no-repeat 0px 0px;
 }
 
 .toggle dt.current span,
@@ -1211,7 +1218,7 @@ a#scroll-top {
   height: 42px;
   width: 42px;
   line-height: 42px;
-  background: #131517 url("../images/scroll-top.png") center center no-repeat;
+  background: #131517 url("scroll-top.png") center center no-repeat;
   opacity: 0.8;
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;

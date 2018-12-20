@@ -16,6 +16,7 @@ module Homeland
     scope :recent, -> { order('id desc') }
     scope :latest, -> { order('last_active_mark desc, id desc') }
     scope :features, -> { where('replies_count >= 20').latest }
+    scope :reply_index, ->{ order('replies_count desc, id desc')}
 
     before_create :set_last_active_mark
     def set_last_active_mark
@@ -23,7 +24,9 @@ module Homeland
     end
 
     def activity_at
+      #{}"#{self.replied_at}666" ||"#{self.updated_at}666"||"#{self.created_at}666"
       self.replied_at || self.updated_at || self.created_at
+      #self.replied_at.to_s.delete("UTC") ||self.updated_at.to_s.delete("UTC") ||self.created_at.to_s.delete("UTC")
     end
   end
 end
