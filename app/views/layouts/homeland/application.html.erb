@@ -288,7 +288,7 @@
           <div class="logo-container">
             <!-- Website Logo -->
             <a href="<%= main_app.root_path %>" title="Knowledge Base Theme">
-              <img src="/assets/homeland/logo" alt="Knowledge Base Theme" />
+              <span style="font-size:30px;">喔壳社区</span>
             </a>
             <span class="tag-line">BBS For UCASer</span>
           </div>
@@ -298,21 +298,7 @@
             <div class="menu-top-menu-container">
               <ul id="menu-top-menu" class="clearfix">
                 <li><a href="<%= homeland.root_path %>">最新</a></li>
-                <li><a href="<%= homeland.nodes_path %>">板块</a></li>
-                <li><a href="home-categories-articles.html">Home 3</a></li>
-                <li><a href="articles-list.html">Articles List</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li>
-                  <a href="#">Skins</a>
-                  <ul class="sub-menu">
-                    <li class="current-menu-item">
-                      <a href="blue-skin.html">Blue Skin</a>
-                    </li>
-                    <li><a href="green-skin.html">Green Skin</a></li>
-                    <li><a href="red-skin.html">Red Skin</a></li>
-                    <li><a href="index-2.html">Default Skin</a></li>
-                  </ul>
-                </li>
+                <li><a href="<%= homeland.nodes_path %>">板块列表</a></li>
                 <li>
                   <a href="#">More</a>
                   <ul class="sub-menu">
@@ -321,7 +307,9 @@
                     <li><a href="page.html">Sample Page</a></li>
                   </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="<%= homeland.new_topic_path %>">新建帖子</a></li>
+                <li><a href="">登录</a></li>
+                <li><a href="contact.html">注册</a></li>
               </ul>
             </div>
           </nav>

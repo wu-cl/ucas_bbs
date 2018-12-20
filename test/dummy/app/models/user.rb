@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   end
 
   def avatar_url
-    "//www.gravatar.com/avatar/#{Digest::MD5.hexdigest(self.email)}"
+    "https://avatars1.githubusercontent.com/u/44141526?s=40&amp;v=4"
   end
 
   def admin?
