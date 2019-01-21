@@ -10,6 +10,7 @@ module Homeland
     belongs_to :last_reply_user, class_name: Homeland.config.user_class.to_s
     belongs_to :node, class_name: 'Homeland::Node', counter_cache: true
     has_many :replies, class_name: 'Homeland::Reply'
+    has_many :topicvote, class_name: 'Homeland::TopicVote'
 
     validates :user_id, :title, :body, :node_id, presence: true
 

@@ -28447,3 +28447,419 @@ Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-21 15:37:21 +08
 Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-21 15:37:21 +0800
 Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 15:37:21 +0800
 Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 15:37:21 +0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/rubyspace/ucas_bbs/test/dummy/config/environment.rb:6)
+  [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (55.4ms)[0m  [1m[35mDROP TABLE `homeland_nodes` CASCADE[0m
+  [1m[35m (92.9ms)[0m  [1m[35mCREATE TABLE `homeland_nodes` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `description` varchar(255), `color` varchar(255), `sort` int DEFAULT 0 NOT NULL, `topics_count` int DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_homeland_nodes_on_sort` USING btree (`sort`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (82.1ms)[0m  [1m[35mDROP TABLE `homeland_replies` CASCADE[0m
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE `homeland_replies` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `topic_id` int, `body` text, `body_html` text, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `reply_to_id` int,  INDEX `index_homeland_replies_on_reply_to_id` USING btree (`reply_to_id`),  INDEX `index_homeland_replies_on_topic_id` USING btree (`topic_id`),  INDEX `index_homeland_replies_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (5.4ms)[0m  [1m[35mDROP TABLE `homeland_topics` CASCADE[0m
+  [1m[35m (20.7ms)[0m  [1m[35mCREATE TABLE `homeland_topics` (`id` int AUTO_INCREMENT PRIMARY KEY, `node_id` int NOT NULL, `user_id` int NOT NULL, `title` varchar(255) NOT NULL, `body` text, `body_html` text, `last_reply_id` int, `last_reply_user_id` int, `last_active_mark` int DEFAULT 0 NOT NULL, `replied_at` datetime, `replies_count` int DEFAULT 0 NOT NULL, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_homeland_topics_on_deleted_at` USING btree (`deleted_at`),  INDEX `index_homeland_topics_on_last_active_mark_and_deleted_at` USING btree (`last_active_mark`, `deleted_at`),  INDEX `index_homeland_topics_on_node_id_and_deleted_at` USING btree (`node_id`, `deleted_at`),  INDEX `index_homeland_topics_on_node_id_and_last_active_mark` USING btree (`node_id`, `last_active_mark`),  INDEX `index_homeland_topics_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (5.9ms)[0m  [1m[35mDROP TABLE `users` CASCADE[0m
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, UNIQUE INDEX `index_users_on_email` USING btree (`email`), UNIQUE INDEX `index_users_on_reset_password_token` USING btree (`reset_password_token`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE `homeland_nodes` CASCADE[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE `homeland_nodes` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `description` varchar(255), `color` varchar(255), `sort` int DEFAULT 0 NOT NULL, `topics_count` int DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_homeland_nodes_on_sort` USING btree (`sort`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE `homeland_replies` CASCADE[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE `homeland_replies` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `topic_id` int, `body` text, `body_html` text, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `reply_to_id` int,  INDEX `index_homeland_replies_on_reply_to_id` USING btree (`reply_to_id`),  INDEX `index_homeland_replies_on_topic_id` USING btree (`topic_id`),  INDEX `index_homeland_replies_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (5.8ms)[0m  [1m[35mDROP TABLE `homeland_topics` CASCADE[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE `homeland_topics` (`id` int AUTO_INCREMENT PRIMARY KEY, `node_id` int NOT NULL, `user_id` int NOT NULL, `title` varchar(255) NOT NULL, `body` text, `body_html` text, `last_reply_id` int, `last_reply_user_id` int, `last_active_mark` int DEFAULT 0 NOT NULL, `replied_at` datetime, `replies_count` int DEFAULT 0 NOT NULL, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_homeland_topics_on_deleted_at` USING btree (`deleted_at`),  INDEX `index_homeland_topics_on_last_active_mark_and_deleted_at` USING btree (`last_active_mark`, `deleted_at`),  INDEX `index_homeland_topics_on_node_id_and_deleted_at` USING btree (`node_id`, `deleted_at`),  INDEX `index_homeland_topics_on_node_id_and_last_active_mark` USING btree (`node_id`, `last_active_mark`),  INDEX `index_homeland_topics_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE `users` CASCADE[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, UNIQUE INDEX `index_users_on_email` USING btree (`email`), UNIQUE INDEX `index_users_on_reset_password_token` USING btree (`reset_password_token`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (35.6ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'test', `updated_at` = '2019-01-21 08:52:01' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_nodes`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Support' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Support', 'Support', '2019-01-21 08:52:01', '2019-01-21 08:52:01')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Bug' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Bug', 'Bug', '2019-01-21 08:52:01', '2019-01-21 08:52:01')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Dev' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Dev', 'Dev', '2019-01-21 08:52:01', '2019-01-21 08:52:01')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Meta' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Meta', 'Meta', '2019-01-21 08:52:01', '2019-01-21 08:52:01')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Feature' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Feature', 'Feature', '2019-01-21 08:52:01', '2019-01-21 08:52:01')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Releases' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Releases', 'Releases', '2019-01-21 08:52:01', '2019-01-21 08:52:01')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'Faq' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Faq', 'Faq', '2019-01-21 08:52:01', '2019-01-21 08:52:01')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY 'HowTo' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('HowTo', 'HowTo', '2019-01-21 08:52:01', '2019-01-21 08:52:01')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/rubyspace/ucas_bbs/test/dummy/config/environment.rb:6)
+Started GET "/" for 127.0.0.1 at 2019-01-21 01:02:23 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Topic Load (29.2ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (42.8ms)
+Completed 200 OK in 3923ms (Views: 3829.5ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-21 01:02:28 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-21 01:02:35 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 01:02:35 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 01:02:35 -0800
+Started GET "/contact.html" for 127.0.0.1 at 2019-01-21 01:03:23 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/contact.html"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (8.1ms)
+  Rendered collection of /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (9.7ms)
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.7ms)
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.8ms)
+Started GET "/" for 127.0.0.1 at 2019-01-21 01:03:26 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (3.5ms)
+Completed 200 OK in 67ms (Views: 62.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-21 01:03:31 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 01:03:31 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 01:03:31 -0800
+Started GET "/t/new" for 127.0.0.1 at 2019-01-21 01:03:34 -0800
+Processing by Homeland::TopicsController#new as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-21 01:03:34 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/shared/_links.html.erb (2.3ms)
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/sessions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 97ms (Views: 71.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-21 01:03:34 -0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2019-01-21 01:03:34 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-21 01:03:42 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (1.9ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-21 01:03:46 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 01:03:46 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 01:03:46 -0800
+Started GET "/t/new" for 127.0.0.1 at 2019-01-21 01:03:51 -0800
+Processing by Homeland::TopicsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-21 01:03:51 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-21 01:03:54 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/devise-4.2.1/app/views/devise/registrations/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-21 01:04:20 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nJu8RaSCxfeW6w+eKj7phtnWfFpTETvzbL6VvJkBmq39WMDBwROPSht+Kkh1dGQOpO03OZZiU/4W6Ryt8a6Tlg==", "user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'a@a.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('a@a.com', '$2a$10$A91wb5suGutIbxUVwv7ZneOdSZIgdgYeZN9whTmm85m2dFCDl/8x2', '2019-01-21 09:04:20', '2019-01-21 09:04:20')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2019-01-21 09:04:20', `last_sign_in_at` = '2019-01-21 09:04:20', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 1[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/new
+Completed 302 Found in 117ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/t/new" for 127.0.0.1 at 2019-01-21 01:04:20 -0800
+Processing by Homeland::TopicsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.9ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` IS NULL LIMIT 1[0m
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes`[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/_form.html.erb (16.8ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application (18.6ms)
+Completed 200 OK in 78ms (Views: 59.0ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/t" for 127.0.0.1 at 2019-01-21 01:05:11 -0800
+Processing by Homeland::TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7MpTCdN1kAKAhMW1Sgsw2p5PbTdZjPnrHtWfCwMQBseNCS+NtuTavw0R4GMVQb1S43QmVJz/keZkghYaa78P/A==", "topic"=>{"node_id"=>"1", "title"=>"fuck everything", "body"=>"ruby sucks\r\nruby sucksruby sucksruby sucksruby sucks\r\nruby sucksruby sucksruby sucks\r\nruby sucks\r\nruby sucksruby sucks\r\nruby sucksruby sucksruby sucks\r\nruby sucksruby sucksruby sucks\r\nruby sucksruby sucksruby sucksruby sucks\r\nruby sucks"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_topics` (`node_id`, `user_id`, `title`, `body`, `body_html`, `last_active_mark`, `created_at`, `updated_at`) VALUES (1, 1, 'fuck everything', 'ruby sucks\r\nruby sucksruby sucksruby sucksruby sucks\r\nruby sucksruby sucksruby sucks\r\nruby sucks\r\nruby sucksruby sucks\r\nruby sucksruby sucksruby sucks\r\nruby sucksruby sucksruby sucks\r\nruby sucksruby sucksruby sucksruby sucks\r\nruby sucks', '<p>ruby sucks\nruby sucksruby sucksruby sucksruby sucks\nruby sucksruby sucksruby sucks\nruby sucks\nruby sucksruby sucks\nruby sucksruby sucksruby sucks\nruby sucksruby sucksruby sucks\nruby sucksruby sucksruby sucksruby sucks\nruby sucks</p>\n', 1548061511, '2019-01-21 09:05:11', '2019-01-21 09:05:11')[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE `homeland_nodes` SET `topics_count` = COALESCE(`topics_count`, 0) + 1 WHERE `homeland_nodes`.`id` = 1[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/1
+Completed 302 Found in 198ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/t/1" for 127.0.0.1 at 2019-01-21 01:05:11 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/replies/_topic_body.html.erb (0.5ms)
+  [1m[36mHomeland::Reply Load (0.4ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/_reply_form.html.erb (8.1ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application (15.8ms)
+Completed 200 OK in 87ms (Views: 67.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-21 01:05:17 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-21 01:05:17 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-21 01:05:17 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-21 01:05:17 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-21 01:05:17 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-21 01:05:17 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 01:05:17 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 01:05:17 -0800
+Started POST "/t/1/reply" for 127.0.0.1 at 2019-01-21 01:07:03 -0800
+Processing by Homeland::TopicsController#reply as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jluEukpNp1aR93DkWQ6ZHobGIKTkBTrss4TPicgX6y3vmPg+L9zt6xxiVTIGRBSW+/1rxyF2UuHJ00aYoLjiFg==", "reply"=>{"reply_to_id"=>"", "body"=>"hahaha"}, "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Topic Load (0.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `homeland_replies` (`user_id`, `topic_id`, `body`, `body_html`, `created_at`, `updated_at`) VALUES (1, 1, 'hahaha', '<p>hahaha</p>\n', '2019-01-21 09:07:03', '2019-01-21 09:07:03')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `homeland_topics` SET `replied_at` = '2019-01-21 09:07:03', `last_active_mark` = 1548061623, `last_reply_user_id` = 1, `replies_count` = 1, `updated_at` = '2019-01-21 09:07:03' WHERE `homeland_topics`.`id` = 1[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/1#reply
+Completed 302 Found in 38ms (ActiveRecord: 20.9ms)
+
+
+Started GET "/t/1" for 127.0.0.1 at 2019-01-21 01:07:04 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/replies/_topic_body.html.erb (0.3ms)
+  [1m[36mHomeland::Reply Load (0.5ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered collection of /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/replies/_reply.html.erb [1 times] (5.4ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/_reply_form.html.erb (1.6ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application (22.1ms)
+Completed 200 OK in 64ms (Views: 58.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-21 01:07:08 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-21 01:07:08 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-21 01:07:08 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-21 01:07:08 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-21 01:07:08 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 01:07:08 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-21 01:07:08 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 01:07:08 -0800
+Started POST "/t/1/reply" for 127.0.0.1 at 2019-01-21 01:07:21 -0800
+Processing by Homeland::TopicsController#reply as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T2B16rVYUsQ9HeyVCDUgOZHy08WcfDykGNvEsLPT/j4uowlu0MkYebCIyUNXf62x7MmYplkPVKlijE2h23z3BQ==", "reply"=>{"reply_to_id"=>"", "body"=>"ruby really sucks"}, "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_replies` (`user_id`, `topic_id`, `body`, `body_html`, `created_at`, `updated_at`) VALUES (1, 1, 'ruby really sucks', '<p>ruby really sucks</p>\n', '2019-01-21 09:07:21', '2019-01-21 09:07:21')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `homeland_topics` SET `replied_at` = '2019-01-21 09:07:21', `last_active_mark` = 1548061641, `replies_count` = 2, `updated_at` = '2019-01-21 09:07:21' WHERE `homeland_topics`.`id` = 1[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/1#reply
+Completed 302 Found in 21ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/t/1" for 127.0.0.1 at 2019-01-21 01:07:21 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (1.0ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (1.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/replies/_topic_body.html.erb (0.5ms)
+  [1m[36mHomeland::Reply Load (0.9ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered collection of /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/replies/_reply.html.erb [2 times] (8.0ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/_reply_form.html.erb (1.7ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application (22.6ms)
+Completed 200 OK in 68ms (Views: 59.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-21 01:07:24 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-21 01:07:24 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-21 01:07:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-21 01:07:24 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-21 01:07:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 01:07:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-21 01:07:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 01:07:24 -0800
+Started POST "/t/1/reply" for 127.0.0.1 at 2019-01-21 01:08:38 -0800
+Processing by Homeland::TopicsController#reply as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sO0xdkxgmZ1r5UkF0J74nsK3N5d4trcl+iRRwolhHFTRLk3yKfHTIOZwbNOP1HUWv4x89L3F3yiAc9jT4c4Vbw==", "reply"=>{"reply_to_id"=>"", "body"=>"emmmmmm nice\r\n"}, "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_replies` (`user_id`, `topic_id`, `body`, `body_html`, `created_at`, `updated_at`) VALUES (1, 1, 'emmmmmm nice\r\n', '<p>emmmmmm nice</p>\n', '2019-01-21 09:08:38', '2019-01-21 09:08:38')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `homeland_topics` SET `replied_at` = '2019-01-21 09:08:38', `last_active_mark` = 1548061718, `replies_count` = 3, `updated_at` = '2019-01-21 09:08:38' WHERE `homeland_topics`.`id` = 1[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/1#reply
+Completed 302 Found in 21ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/t/1" for 127.0.0.1 at 2019-01-21 01:08:38 -0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/replies/_topic_body.html.erb (0.3ms)
+  [1m[36mHomeland::Reply Load (0.4ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered collection of /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/replies/_reply.html.erb [3 times] (8.7ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/_reply_form.html.erb (1.4ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application (19.5ms)
+Completed 200 OK in 56ms (Views: 49.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-21 01:08:42 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-21 01:08:42 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-21 01:08:42 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 01:08:42 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-21 01:08:42 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-21 01:08:42 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-21 01:08:42 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 01:08:42 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-21 04:20:26 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Topic Load (3.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (10.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (4.0ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (41.4ms)
+Completed 200 OK in 115ms (Views: 101.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-21 04:20:31 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-21 04:20:31 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 04:20:31 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 04:20:31 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-21 04:20:31 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-21 04:20:37 -0800
+Started GET "/nodes" for 127.0.0.1 at 2019-01-21 04:22:18 -0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (5.4ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/homeland/category-main-icon.png" for 127.0.0.1 at 2019-01-21 04:22:26 -0800
+Started GET "/t/new" for 127.0.0.1 at 2019-01-21 04:22:35 -0800
+Processing by Homeland::TopicsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` IS NULL LIMIT 1[0m
+  Rendering /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes`[0m
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/_form.html.erb (7.9ms)
+  Rendered /home/serlytus/rubyspace/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application (9.7ms)
+Completed 200 OK in 69ms (Views: 61.9ms | ActiveRecord: 1.9ms)
+
+
