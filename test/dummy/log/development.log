@@ -28404,3 +28404,46 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+Started GET "/" for 127.0.0.1 at 2019-01-21 15:37:12 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (83.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Topic Load (25.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[36mHomeland::Topic Load (1.2ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (1.2ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 4 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 3 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [7 times] (111.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [7 times] (23.1ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (296.4ms)
+Completed 200 OK in 2449ms (Views: 2127.9ms | ActiveRecord: 58.6ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-21 15:37:15 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-21 15:37:15 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-21 15:37:15 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-21 15:37:15 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-21 15:37:16 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-21 15:37:16 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-21 15:37:16 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-21 15:37:16 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-21 15:37:16 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-21 15:37:21 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-21 15:37:21 +0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-21 15:37:21 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-21 15:37:21 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-21 15:37:21 +0800
