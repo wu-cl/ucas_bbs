@@ -48,5 +48,5 @@ test:
 #
 production:
   <<: *default
-  database: dummary_test
+  database: dummary_production
   #url: <%= ENV['CLEARDB_DATABASE_URL'] %>
