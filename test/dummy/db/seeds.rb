@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 if Homeland::Node.count == 0
-  root_names = %w(Support Bug Dev Meta Feature Releases Faq HowTo)
+  root_names = %w(课程资源共享 疑难解答 课程评价 偷偷吐槽 内推交流 编程技术 项目组队)
   root_names.each do |name|
     Homeland::Node.create(name: name, description: name)
   end
