@@ -13,6 +13,10 @@ gem 'devise', '~> 4.2.0'
 gem 'jquery-rails'
 gem 'mysql2'
 gem 'puma'
+gem 'ransack'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'seo_helper'
 
 group :development, :test do
   gem 'minitest'
