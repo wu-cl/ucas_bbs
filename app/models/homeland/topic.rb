@@ -17,7 +17,7 @@ module Homeland
     scope :recent, -> { order('id desc') }
     scope :latest, -> { order('last_active_mark desc, id desc') }
     scope :features, -> { where('replies_count >= 20').latest }
-    scope :reply_index, ->{ order('replies_count desc, id desc')}
+    scope :reply_index, ->{ order('replies_count desc, id desc') }
 
     before_create :set_last_active_mark
     def set_last_active_mark

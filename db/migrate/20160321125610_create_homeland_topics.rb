@@ -12,6 +12,7 @@ class CreateHomelandTopics < ActiveRecord::Migration
       t.datetime :replied_at
       t.integer :replies_count, null: false, default: 0
       t.datetime :deleted_at
+      t.boolean :has_vote, null:false, default: 0
 
       t.timestamps null: false
     end

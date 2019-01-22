@@ -28863,3 +28863,47 @@ Processing by Homeland::TopicsController#new as HTML
 Completed 200 OK in 69ms (Views: 61.9ms | ActiveRecord: 1.9ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/rubyspace/ucas_bbs/test/dummy/config/environment.rb:6)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('420596978843328840', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (37.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateHomelandTopicVotes (20190122024032)
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE `homeland_topic_votes` (`id` int AUTO_INCREMENT PRIMARY KEY, `topic_id` int NOT NULL, `votename` varchar(255) NOT NULL, `description` text, `approval` int DEFAULT 0 NOT NULL, `opposite` int DEFAULT 0 NOT NULL, `user_id` int NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topic_votes_on_topic_id`  ON `homeland_topic_votes` (`topic_id`) [0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190122024032')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (28.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('420596978843328840')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_nodes`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_nodes'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_replies`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_replies'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_topic_votes`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_topic_votes'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_topics`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_topics'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/rubyspace/ucas_bbs/test/dummy/config/environment.rb:6)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('420596978843328840', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('420596978843328840')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_nodes`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_nodes'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_replies`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_replies'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_topic_votes`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_topic_votes'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_topics`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_topics'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322062228) do
+ActiveRecord::Schema.define(version: 20190122024032) do
 
   create_table "homeland_nodes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                     null: false
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 20160322062228) do
     t.index ["reply_to_id"], name: "index_homeland_replies_on_reply_to_id", using: :btree
     t.index ["topic_id"], name: "index_homeland_replies_on_topic_id", using: :btree
     t.index ["user_id"], name: "index_homeland_replies_on_user_id", using: :btree
+  end
+
+  create_table "homeland_topic_votes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "topic_id",                              null: false
+    t.string   "votename",                              null: false
+    t.text     "description", limit: 65535
+    t.integer  "approval",                  default: 0, null: false
+    t.integer  "opposite",                  default: 0, null: false
+    t.integer  "user_id",                               null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.index ["topic_id"], name: "index_homeland_topic_votes_on_topic_id", using: :btree
   end
 
   create_table "homeland_topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
