@@ -32,11 +32,22 @@
           <!-- end of post meta -->
 
           <%= render partial: 'homeland/replies/topic_body', locals: { reply: @topic } %>
+          <% if owner?(@topic) %>
+            <%= form_tag topic_url(@topic), :method => :delete do %>
+              <%= label_tag 'Delete' %>
+              <%= submit_tag 'delete' %>
+            <% end %>
+
+            edit_topic
+            <a href="<%= edit_topic_url(@topic) %>" class="btn btn-lg btn-default">update</a>
+          <% else %>
+            <div>fuck u</div>
+          <% end %>
         </article>
 
         <section id="comments">
 
-          <h3 id="comments-title">(3) Comments</h3>
+          <h3 id="comments-title"><%= @topic.replies_count %> Comments</h3>
 
           <ol class="commentlist">
 
