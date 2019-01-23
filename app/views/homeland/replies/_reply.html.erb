@@ -3,6 +3,7 @@ is_reply = reply.respond_to?(:reply_to_id)
 %>
 <!--
 <div class="reply media" id="reply-<%= reply.id %>" data-id="<%= reply.id %>">
+   22222222222222222223333333333333333
   <div class="media-left">
     <%= user_avatar_tag(reply) %>
   </div>
@@ -44,13 +45,12 @@ is_reply = reply.respond_to?(:reply_to_id)
                 </a>
 
                 <div class="comment-meta">
-
                         <h5 class="author">
-                                <cite class="fn"><a href="#" rel="external nofollow" class="url"><%= user_name_tag(reply) %></a></cite>
+                                <cite class="fn"><a href="#" class="url"><%= user_name_tag(reply) %></a></cite>
                         </h5>
 
                         <p class="date">
-                                <a href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/#comment-4">
+                                <a href="">
                                         <time><%= timeago reply.created_at %></time>
                                 </a>
                         </p>
@@ -61,6 +61,21 @@ is_reply = reply.respond_to?(:reply_to_id)
                   <div class="markdown">
                     <%= raw reply.body_html %>
                   </div>
+                  <% puts reply.user_id %>
+                  <% puts current_user.id %>
+                  <% if owner?(reply) %>
+                    <% puts '3.141592653' %>
+                    <div>
+                      <a href="<%= reply_url(reply) %>" data-method="DELETE" data-confirm="<%= t('homeland.are_you_sure_to_delete') %>" class="btn-opt"><i class="fa fa-trash"></i></a>
+                      <%= form_tag reply_url(reply), :method => :delete do %>
+                        <%= label_tag 'Delete' %>
+                        <%= submit_tag 'delete' %>
+                      <% end %>
+                    </div>
+                    
+                  <% else %>
+                    
+                  <% end %>
                 </div><!-- end of comment-body -->
 
         </article><!-- end of comment -->

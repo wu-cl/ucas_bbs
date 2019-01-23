@@ -14,6 +14,7 @@ module Homeland
     def node
       @node = Node.find(params[:id])
       @topics = @node.topics.latest.includes(:user).page(params[:page])
+      @topics_reply = @node.topics.reply_index.includes(:user).page(params[:page])
 
       render action: "index"
     end

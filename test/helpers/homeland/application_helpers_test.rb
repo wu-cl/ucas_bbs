@@ -34,7 +34,7 @@ module Homeland
       # Topic have user
       u = User.new(id: 2, email: "monster@gmail.com")
       topic.user = u
-      assert_equal '<a class="user-name" href="/users/2">monster</a>', user_name_tag(topic)
+      assert_equal '<a class="user-name" href="#">monster</a>', user_name_tag(topic)
 
       # Reply have no user
       reply = Reply.new(id: 22, body: '123123')
@@ -42,7 +42,7 @@ module Homeland
 
       # Reply have user
       reply.user = u
-      assert_equal '<a class="user-name" href="/users/2">monster</a>', user_name_tag(reply)
+      assert_equal '<a class="user-name" href="#">monster</a>', user_name_tag(reply)
     end
 
     test 'user_avatar_tag' do
