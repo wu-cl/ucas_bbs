@@ -40323,3 +40323,1507 @@ Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:04:17 -08
 Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:04:17 -0800
 Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:04:17 -0800
 Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:04:18 -0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/ucas/ucas_bbs/test/dummy/config/environment.rb:6)
+Started GET "/c/1" for 127.0.0.1 at 2019-01-23 00:48:51 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (7.0ms)
+  [1m[36mHomeland::Topic Load (1.1ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (3.0ms)
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (3.1ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (77.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 647ms (Views: 584.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:48:52 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 00:49:03 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.4ms)
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (20.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 114ms (Views: 79.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 00:49:04 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 00:49:09 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (11.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (9.0ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (35.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 128ms (Views: 121.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 00:49:09 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:49:09 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:49:10 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:49:10 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:49:10 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:49:13 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 00:49:19 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.6ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (19.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 94ms (Views: 88.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 00:49:20 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 00:49:24 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.4ms)
+  [1m[36mHomeland::Topic Load (1.0ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.9ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (9.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (8.8ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (32.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 97ms (Views: 91.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 00:49:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:49:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:49:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:49:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:49:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:49:26 -0800
+Started GET "/c/1" for 127.0.0.1 at 2019-01-23 00:49:27 -0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.1ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (2.5ms)
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (1.7ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (18.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 88ms (Views: 81.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 00:49:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:49:27 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:49:27 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:49:27 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:49:27 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:49:29 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 00:49:31 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.3ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (8.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (7.9ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (28.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 87ms (Views: 81.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 00:49:31 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:49:31 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:49:31 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:49:31 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:49:31 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:51:45 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:06 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:08 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:08 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:08 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:08 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:08 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:08 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:08 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:08 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:09 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:09 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:09 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:09 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:10 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:11 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:12 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:12 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:12 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:12 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:13 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:14 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:15 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:16 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:17 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:17 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:17 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:17 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:17 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:17 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:17 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:17 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:19 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:19 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:19 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:19 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:22 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:25 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:25 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:25 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:25 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:52:31 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:31 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:52:31 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:52:31 -0800
+Started GET "/assets/homeland/main-bg.jpg" for 127.0.0.1 at 2019-01-23 00:52:34 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:52:40 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (1.0ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (10.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (6.0ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (29.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 162.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/main5152.self-577a7eeacfe68de07e60b765b19ce9b2cfb559a4f06c09cfebc5f628978baa38.css?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:53:42 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:08 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:25 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:25 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:25 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:25 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:25 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:25 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:25 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:25 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:26 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:26 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:26 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:26 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:27 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:27 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:27 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:27 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:27 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:27 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:28 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:28 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:28 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:31 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:31 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:31 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:31 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:39 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:50 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:50 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:50 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:50 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:50 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:50 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:50 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:50 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:51 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:52 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:53 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:54 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:55 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:56 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:57 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:58 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:55:59 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:01 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:02 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:03 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:03 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:03 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:03 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:03 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:04 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:05 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:06 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:06 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:06 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:06 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:06 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:06 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:06 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:06 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 00:56:07 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:56:07 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:56:07 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:56:07 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:02:25 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:02:25 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:02:25 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:02:25 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:02:28 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 01:02:53 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.7ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (11.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (7.5ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (36.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 165ms (Views: 157.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/main5152.self-535e95bad8cb63ea42122dca2d08eac61de802d70153e523070c166a866d866b.css?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:02:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:02:55 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:17 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:17 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:17 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:17 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:17 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:17 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:17 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:17 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:18 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:19 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:20 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:21 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:22 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:23 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:23 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:23 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:23 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:26 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:27 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:28 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:29 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:29 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:29 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:29 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:30 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:30 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:30 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:30 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:30 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:30 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:30 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:30 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:31 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:31 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:31 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:31 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:32 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:32 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:32 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:32 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:33 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:33 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:33 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:33 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:03:38 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:03:38 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:03:38 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:03:38 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (9.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (5.9ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (28.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 173ms (Views: 166.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/main5152.self-3e587df409e38831abd9dcf0c0acc81962b2cf49f2534954644bd0efc63c02ca.css?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:04:00 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:04:01 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:04:01 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:04:02 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 01:04:07 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (23.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 75ms (Views: 69.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 01:04:07 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 01:04:13 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.7ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.9ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (8.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (5.5ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (28.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 78.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 01:04:13 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 01:04:13 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:04:13 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 01:04:13 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 01:04:13 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 01:04:13 -0800

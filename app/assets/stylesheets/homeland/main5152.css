@@ -143,12 +143,12 @@ span.tag-line {
 .search-area-wrapper {
   background: #353b65 url("main-bg.jpg") center top no-repeat;
   background-size: 100%;
-  min-height: 279px;
+  min-height: 100px;
   height: auto !important;
-  height: 279px;
+  height: 100px;
 }
 .search-area-wrapper .search-area {
-  padding: 50px 0;
+  padding: 25px 0;
 }
 
 h3.search-header {
@@ -169,7 +169,7 @@ p.search-tag-line {
 }
 
 form.search-form {
-  margin: 40px 0 0;
+  margin: 4px 0 0;
   text-align: center;
 }
 form.search-form .input-common, form.search-form input.search-term, form.search-form input.search-btn {
