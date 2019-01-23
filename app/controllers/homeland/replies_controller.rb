@@ -17,6 +17,8 @@ module Homeland
     end
 
     def destroy
+      @topic_replies_count ||= Topic.find(reply.topic_id).replies_count - 1
+      @message = Topic.update(reply.topic_id,:replies_count=>@topic_replies_count)
       reply.destroy
       redirect_to(topic_path(reply.topic_id), notice: t('homeland.reply_deleted'))
     end

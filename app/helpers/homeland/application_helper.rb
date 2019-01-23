@@ -51,7 +51,7 @@ module Homeland
         type = :danger
         type = :success if type.to_sym == :notice
         close_button = raw %(<button type="button" class="close" data-dismiss="alert">×</button>)
-        text = content_tag(:div, close_button + message, class: "alert alert-dismissible alert-#{type}")
+        text = content_tag(:div, close_button + message, class: "alert alert-success")
         flash_messages << text if message
       end
 

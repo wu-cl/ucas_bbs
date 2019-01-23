@@ -13,7 +13,7 @@
             <h3>Featured Articles</h3>
             <ul class="articles">
               <% if @topics.blank? %> <%= t('homeland.topics.empty') %> 
-              <% else%> <%= render @topics %> <% end %>
+              <% else%> <%= render @topics_reply %> <% end %>
             </ul>
           </section>
           <section class="span4 articles-list">
