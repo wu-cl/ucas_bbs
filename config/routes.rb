@@ -12,4 +12,9 @@ Homeland::Engine.routes.draw do
   end
   resources :replies, path: 'r'
   resources :nodes
+  resources :searcht do
+    collection do
+      get :search
+    end
+  end
 end
