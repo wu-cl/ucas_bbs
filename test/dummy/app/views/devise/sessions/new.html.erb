@@ -1,0 +1,21 @@
+
+  <div class="form">
+      <h2>登 陆 - 喔 壳 社 区</h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+
+        <div class="actions">
+          <%= f.submit "登   陆" %>
+        </div>
+      <% end %>
+  </div>
+  <div class="cta"><a href="/users/password/new">忘 记 密 码 ？</a></div>
