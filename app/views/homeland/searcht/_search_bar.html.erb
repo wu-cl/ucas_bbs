@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-sm-9 col-lg-8 col-lg-offset-2">
     <%= form_tag search_searcht_index_path, :method => :get, :class => "jobs-search-form" do %>
       <div class="input-group">
@@ -10,6 +10,15 @@
           </button>
         </span>
       </div>
+    <% end %>
+  </div>
+</div> -->
+
+<div class="search-area-wrapper">
+  <div class="search-area container">
+    <%= form_tag search_searcht_index_path, :method => :get, :class => "search-form clearfix" do %>
+        <input type="text" class="search-term required" name="q" value="<%= params[:q] %>" placeholder="搜索关键字...">
+        <input class="search-btn" type="submit" value="Search" />
     <% end %>
   </div>
 </div>
