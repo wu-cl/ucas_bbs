@@ -6,8 +6,8 @@ module Homeland
     end
 
     def index
-      @topics = Topic.latest.includes(:user).page(params[:page]).limit(5).all
-      @topics_reply = Topic.reply_index.includes(:user).page(params[:page]).limit(5).all
+      @topics = Topic.latest.includes(:user).page(params[:page]).limit(15).all
+      @topics_reply = Topic.reply_index.includes(:user).page(params[:page]).limit(15).all
       set_seo_meta(t("homeland.nav.latest"))
     end
 
@@ -88,6 +88,11 @@ module Homeland
     # DELETE /topics/1
     # DELETE /topics/1.xml
     def destroy
+      # @node = Node.find_by(id: params[:node_id])
+      @node_topics_count ||= Node.find_by(id: topic.node_id).topics_count - 1
+      @message = Node.update(topic.node_id,:topics_count=>@node_topics_count)
+      # @topic_replies_count ||= Topic.find(reply.topic_id).replies_count - 1
+      # @message = Topic.update(reply.topic_id,:replies_count=>@topic_replies_count)
       topic.destroy
       redirect_to(topics_path, notice: t('homeland.topic_deleted'))
     end
