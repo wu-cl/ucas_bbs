@@ -347,3 +347,1580 @@ puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
   Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.2ms)
   Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (266.3ms)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/ucas/ucas_bbs/test/dummy/config/environment.rb:6)
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 05:58:06 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (12.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (18.3ms)
+  [1m[36mHomeland::Topic Load (1.9ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (82.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 537ms (Views: 499.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/main5152.self-3e587df409e38831abd9dcf0c0acc81962b2cf49f2534954644bd0efc63c02ca.css?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 05:58:07 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:05:19 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (1.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:33: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...pend=( if st.body.length > 10 );@output_buffer.safe_append='...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:34: syntax error, unexpected keyword_else
+...ze;@output_buffer.append=( else );@output_buffer.safe_append...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:35: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;           end 
+                       ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+     end 
+        ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:46: syntax error, unexpected keyword_ensure, expecting ')'
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:48: syntax error, unexpected keyword_end, expecting ')'):
+  
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:33: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...pend=( if st.body.length > 10 );@output_buffer.safe_append='...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:34: syntax error, unexpected keyword_else
+...ze;@output_buffer.append=( else );@output_buffer.safe_append...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:35: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;           end 
+                       ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+     end 
+        ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:46: syntax error, unexpected keyword_ensure, expecting ')'
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:48: syntax error, unexpected keyword_end, expecting ')'
+actionview (5.0.7.1) lib/action_view/template.rb:310:in `module_eval'
+actionview (5.0.7.1) lib/action_view/template.rb:310:in `compile'
+actionview (5.0.7.1) lib/action_view/template.rb:259:in `block (2 levels) in compile!'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:356:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:258:in `block in compile!'
+actionview (5.0.7.1) lib/action_view/template.rb:246:in `synchronize'
+actionview (5.0.7.1) lib/action_view/template.rb:246:in `compile!'
+actionview (5.0.7.1) lib/action_view/template.rb:158:in `block in render'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.7.1) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.1) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.7.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.7.1) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.7.1) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.7.1) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.7.1) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/serlytus/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.6ms)
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:08:06 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (2.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:33: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...nd=( if (st.body.length > 10) );@output_buffer.safe_append='...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:34: syntax error, unexpected keyword_else
+...ze;@output_buffer.append=( else );@output_buffer.safe_append...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:35: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;           end 
+                       ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+     end 
+        ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:46: syntax error, unexpected keyword_ensure, expecting ')'
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:48: syntax error, unexpected keyword_end, expecting ')'):
+  
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:33: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...nd=( if (st.body.length > 10) );@output_buffer.safe_append='...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:34: syntax error, unexpected keyword_else
+...ze;@output_buffer.append=( else );@output_buffer.safe_append...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:35: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;           end 
+                       ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+     end 
+        ^
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:46: syntax error, unexpected keyword_ensure, expecting ')'
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:48: syntax error, unexpected keyword_end, expecting ')'
+actionview (5.0.7.1) lib/action_view/template.rb:310:in `module_eval'
+actionview (5.0.7.1) lib/action_view/template.rb:310:in `compile'
+actionview (5.0.7.1) lib/action_view/template.rb:259:in `block (2 levels) in compile!'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:356:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:258:in `block in compile!'
+actionview (5.0.7.1) lib/action_view/template.rb:246:in `synchronize'
+actionview (5.0.7.1) lib/action_view/template.rb:246:in `compile!'
+actionview (5.0.7.1) lib/action_view/template.rb:158:in `block in render'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.7.1) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.1) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.7.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.7.1) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.7.1) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.7.1) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.7.1) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/serlytus/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.9ms)
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.9ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (24.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 95ms (Views: 87.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/main5152.self-3e587df409e38831abd9dcf0c0acc81962b2cf49f2534954644bd0efc63c02ca.css?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:32 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:15:33 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:15:33 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:34:27 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.3ms)
+  [1m[36mHomeland::Topic Load (1.2ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (1.1ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (28.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 115ms (Views: 105.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:34:27 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:34:27 -0800
+Started GET "/assets/homeland/main5152.self-3e587df409e38831abd9dcf0c0acc81962b2cf49f2534954644bd0efc63c02ca.css?body=1" for 127.0.0.1 at 2019-01-23 06:34:27 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:34:27 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:34:28 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.2ms)
+  [1m[36mHomeland::Topic Load (1.0ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (27.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 99ms (Views: 91.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Started GET "/assets/homeland/main5152.self-3e587df409e38831abd9dcf0c0acc81962b2cf49f2534954644bd0efc63c02ca.css?body=1" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:19 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:46:20 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.5ms)
+  [1m[36mHomeland::Topic Load (2.0ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (26.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 110ms (Views: 91.4ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/main5152.self-3e587df409e38831abd9dcf0c0acc81962b2cf49f2534954644bd0efc63c02ca.css?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:47:25 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.2ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (22.4ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 109ms (Views: 102.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/main5152.self-3e587df409e38831abd9dcf0c0acc81962b2cf49f2534954644bd0efc63c02ca.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:48:13 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (23.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 99ms (Views: 92.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/main5152.self-3e587df409e38831abd9dcf0c0acc81962b2cf49f2534954644bd0efc63c02ca.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:48:54 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 06:49:52 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 06:50:08 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:50:23 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:50:23 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:50:23 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:50:23 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:50:28 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:50:28 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:50:28 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:50:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 06:50:28 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 06:50:43 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.5ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (26.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 289ms (Views: 280.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:52:25 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:52:26 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:52:26 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:52:26 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:52:26 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:52:26 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 06:52:26 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:57:31 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.0ms)
+  [1m[36mHomeland::Topic Load (1.2ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (35.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (1.1ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (291.7ms)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 37.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_name' for #<#<Class:0x00560fce1200a0>:0x007fab88c08330>
+Did you mean?  user_name_tag):
+    61:                   <span class="date"><%= timeago st.activity_at %></span>
+    62:                   <span class="category"><%= node_tag(st.node) %></span>
+    63:                   <span class="comments"><%= st.replies_count %> Comments</a></span>
+    64:                   <span class="poster"><%= user_name(st) %></span>
+    65:           </div><!-- end of post meta -->
+    66: 
+    67:   </header>
+  
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:64:in `block in __home_serlytus_ucas_ucas_bbs_app_views_homeland_searcht_search_html_erb___2447878090385275310_70187355229820'
+activerecord (5.0.7.1) lib/active_record/relation/delegation.rb:38:in `each'
+activerecord (5.0.7.1) lib/active_record/relation/delegation.rb:38:in `each'
+/home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb:51:in `__home_serlytus_ucas_ucas_bbs_app_views_homeland_searcht_search_html_erb___2447878090385275310_70187355229820'
+actionview (5.0.7.1) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.7.1) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.1) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.7.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.7.1) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.7.1) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.7.1) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.7.1) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/serlytus/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/serlytus/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.6ms)
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.1ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (37.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 128ms (Views: 120.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 06:57:49 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (3.4ms)
+  [1m[36mHomeland::Topic Load (1.1ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (1.2ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (30.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 128ms (Views: 119.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 06:58:06 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.8ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (26.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 107ms (Views: 100.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:00:39 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 07:01:32 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.3ms)
+  [1m[36mHomeland::Topic Load (1.2ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (26.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 112ms (Views: 104.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:01:33 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:04:14 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.4ms)
+  [1m[36mHomeland::Topic Load (1.0ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (16.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 81ms (Views: 75.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:04:14 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:04:14 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:04:14 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:04:14 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:04:14 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:04:14 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.1ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (18.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 99ms (Views: 93.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:06:48 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.3ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (17.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 90ms (Views: 84.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:07:02 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=ffffffff" for 127.0.0.1 at 2019-01-23 07:07:12 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"ffffffff"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.4ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%ffffffff%') LIMIT 15 OFFSET 0[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (5.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 90ms (Views: 85.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:07:12 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 07:07:18 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.2ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (23.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 102ms (Views: 95.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:07:18 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:07:18 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:07:18 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:07:18 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:07:18 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:07:18 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=p" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"p"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%p%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (22.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 98ms (Views: 91.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:11:42 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:11:54 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.6ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (20.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 112ms (Views: 106.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:11:55 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:11:55 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:11:55 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:11:55 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:11:55 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:11:55 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.9ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (19.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 126ms (Views: 117.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:19 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:20 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:20 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:19:20 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:19:20 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:19:20 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:19:20 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:19:20 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:19:20 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.0ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (21.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 104ms (Views: 97.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:19:56 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (13.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 92ms (Views: 86.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:20:23 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:21:43 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.2ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (15.8ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 91ms (Views: 84.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:21:44 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.9ms)
+  [1m[36mHomeland::Topic Load (1.1ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (16.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 97ms (Views: 91.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:22:38 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:22:39 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:22:39 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:22:39 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:22:39 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:22:39 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:22:39 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.7ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (17.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 97ms (Views: 90.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:24:40 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:25:26 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.6ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (21.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 161ms (Views: 154.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:25:27 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (17.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 87ms (Views: 81.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:25:44 -0800
+Started GET "/searcht/search?utf8=%E2%9C%93&q=Me" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Processing by Homeland::SearchtController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Me"}
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.8ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND (`homeland_topics`.`title` LIKE '%Me%') LIMIT 15 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/search.html.erb within layouts/homeland/application (18.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 94ms (Views: 88.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:25 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 07:26:26 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 07:26:30 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.1ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 5 OFFSET 0[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 5 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (1.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (14.0ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (10.2ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (48.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 184ms (Views: 174.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:26:30 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 07:26:30 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 07:26:30 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 07:26:30 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 07:26:30 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.0ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 5 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 5 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (1.1ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (1.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (12.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (8.1ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (38.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 106ms (Views: 97.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 07:27:24 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 07:27:30 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 5 OFFSET 0[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 5 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (1.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (10.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (9.5ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (35.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 121ms (Views: 113.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/main5152.self-93a369aa4d1f6fe2cc618662e18e7d31a2a2b21b33e50c4439220b807a825778.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 07:27:51 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 07:27:51 -0800

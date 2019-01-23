@@ -132,11 +132,15 @@
     }
 
     #top .primary-color, a, #cancel-comment-reply-link, .blog-tags a:hover, .relThumb a:hover strong, .flex_column h1, .flex_column h2, .flex_column h3, .flex_column h4, .flex_column h5, .flex_column h6, #top #wrap_all .tweet-text a, #top #js_sort_items a.active_sort, .callout a:hover{
-    color:#f0b70c;
+    color: #00B3B2;
     }
 
     #top .primary-border, div .main_menu ul:first-child > li.current-menu-item > a, div .main_menu ul:first-child > li.current_page_item > a, div .button, input[type="submit"], #submit, #top .main_menu .menu ul, .info_text_header{
     border-color:#f0b70c;
+    }
+
+    .sitelogo {
+      color: #f0b70c;
     }
 
     h1, h2, h3, h4, h5, h6, .hero-text, blockquote, legend, #top .slideshow_caption h1{
@@ -253,7 +257,7 @@
 
     <!--
     <div class="container">
-      <a class="navbar-brand" href="<%= main_app.root_path %>">UCAS-BBS</a>
+      <a class="navbar-brand sitelogo" href="<%= main_app.root_path %>">UCAS-BBS</a>
       <ul class="nav navbar-nav main-nav">
         <li class="nav-item<%= ' active' if controller_name == 'topics' and action_name == 'index' %>">
           <a class="nav-link" href="<%= homeland.root_path %>">最新</a>
@@ -282,8 +286,8 @@
         <div class="container">
           <div class="logo-container">
             <!-- Website Logo -->
-            <a href="<%= main_app.root_path %>" title="Knowledge Base Theme">
-              <span style="font-size:30px;">喔壳社区</span>
+            <a href="<%= main_app.root_path %>" title="Home Page">
+              <span style="font-size:30px;color:#f0b70c">喔壳社区</span>
             </a>
             <span class="tag-line">BBS For UCASer</span>
           </div>

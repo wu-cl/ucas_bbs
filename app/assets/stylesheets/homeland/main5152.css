@@ -628,6 +628,10 @@ ul.articles li.article-entry:last-child {
 .hentry .post-meta .comments {
   background: url("comment.png") no-repeat left center;
 }
+.hentry .post-meta .poster {
+  float:right;
+  background: url("user.png") no-repeat left center;
+}
 .hentry .post-meta .like-count {
   float: right;
   background: url("like.png") no-repeat 4px 6px;
