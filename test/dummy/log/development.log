@@ -35564,3 +35564,754 @@ Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-22 11:53:11 
 Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-22 11:53:11 -0800
 Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-22 11:53:13 -0800
 >>>>>>> origin/stry
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+  [1m[35m (74.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (67.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT GET_LOCK('420596978843328840', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateHomelandNodes (20160321125035)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateHomelandNodes < ActiveRecord::Migration[4.2] (called from block in execute_migration_in_transaction at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/migration.rb:1232)
+  [1m[35m (67.9ms)[0m  [1m[35mCREATE TABLE `homeland_nodes` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `description` varchar(255), `color` varchar(255), `sort` int DEFAULT 0 NOT NULL, `topics_count` int DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (57.0ms)[0m  [1m[35mCREATE  INDEX `index_homeland_nodes_on_sort`  ON `homeland_nodes` (`sort`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160321125035')[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHomelandTopics (20160321125610)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateHomelandTopics < ActiveRecord::Migration[4.2] (called from block in execute_migration_in_transaction at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/migration.rb:1232)
+  [1m[35m (66.9ms)[0m  [1m[35mCREATE TABLE `homeland_topics` (`id` int AUTO_INCREMENT PRIMARY KEY, `node_id` int NOT NULL, `user_id` int NOT NULL, `title` varchar(255) NOT NULL, `body` text, `body_html` text, `last_reply_id` int, `last_reply_user_id` int, `last_active_mark` int DEFAULT 0 NOT NULL, `replied_at` datetime, `replies_count` int DEFAULT 0 NOT NULL, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (58.2ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_deleted_at`  ON `homeland_topics` (`deleted_at`) [0m
+  [1m[35m (56.8ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_node_id_and_deleted_at`  ON `homeland_topics` (`node_id`, `deleted_at`) [0m
+  [1m[35m (58.2ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_user_id`  ON `homeland_topics` (`user_id`) [0m
+  [1m[35m (57.9ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_last_active_mark_and_deleted_at`  ON `homeland_topics` (`last_active_mark`, `deleted_at`) [0m
+  [1m[35m (57.0ms)[0m  [1m[35mCREATE  INDEX `index_homeland_topics_on_node_id_and_last_active_mark`  ON `homeland_topics` (`node_id`, `last_active_mark`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160321125610')[0m
+  [1m[35m (24.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHomelandReplies (20160321125920)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateHomelandReplies < ActiveRecord::Migration[4.2] (called from block in execute_migration_in_transaction at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/migration.rb:1232)
+  [1m[35m (72.0ms)[0m  [1m[35mCREATE TABLE `homeland_replies` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `topic_id` int, `body` text, `body_html` text, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (58.7ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_user_id`  ON `homeland_replies` (`user_id`) [0m
+  [1m[35m (57.9ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_topic_id`  ON `homeland_replies` (`topic_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160321125920')[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20160321143003)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class DeviseCreateUsers < ActiveRecord::Migration[4.2] (called from block in execute_migration_in_transaction at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/migration.rb:1232)
+  [1m[35m (68.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (58.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (58.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160321143003')[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReplyToIdToReplies (20160322062228)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddReplyToIdToReplies < ActiveRecord::Migration[4.2] (called from block in execute_migration_in_transaction at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/migration.rb:1232)
+  [1m[35m (140.8ms)[0m  [1m[35mALTER TABLE `homeland_replies` ADD `reply_to_id` int[0m
+  [1m[35m (57.7ms)[0m  [1m[35mCREATE  INDEX `index_homeland_replies_on_reply_to_id`  ON `homeland_replies` (`reply_to_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160322062228')[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-01-23 03:11:00', '2019-01-23 03:11:00')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('420596978843328840')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_nodes`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_nodes'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_replies`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_replies'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `homeland_topics`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'homeland_topics'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (42.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_nodes`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '课程资源共享' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('课程资源共享', '课程资源共享', '2019-01-23 03:11:05', '2019-01-23 03:11:05')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '疑难解答' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('疑难解答', '疑难解答', '2019-01-23 03:11:05', '2019-01-23 03:11:05')[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '课程评价' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('课程评价', '课程评价', '2019-01-23 03:11:05', '2019-01-23 03:11:05')[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '偷偷吐槽' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('偷偷吐槽', '偷偷吐槽', '2019-01-23 03:11:05', '2019-01-23 03:11:05')[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '内推交流' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('内推交流', '内推交流', '2019-01-23 03:11:05', '2019-01-23 03:11:05')[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '编程技术' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('编程技术', '编程技术', '2019-01-23 03:11:05', '2019-01-23 03:11:05')[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '项目组队' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('项目组队', '项目组队', '2019-01-23 03:11:05', '2019-01-23 03:11:05')[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:11:30 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (5.2ms)
+  [1m[36mHomeland::Topic Load (43.1ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (56.3ms)
+Completed 200 OK in 723ms (Views: 623.3ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:11:31 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:11:31 +0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:12:27 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (16.3ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (29.8ms)
+Completed 200 OK in 482ms (Views: 410.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:12:28 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.2ms)
+  [1m[36mHomeland::Topic Load (1.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (5.4ms)
+Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:13:26 +0800
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 11:13:33 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 71ms (Views: 51.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:13:36 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:21 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:22 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oe08JEEOgzaP61erPMezzqdqQXCbWoTsprLPJrjYZRrtmvuYJBVyvtqCLxzTYpoWcKhFG2egECCcth4WcglBXg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oe08JEEOgzaP61erPMezzqdqQXCbWoTsprLPJrjYZRrtmvuYJBVyvtqCLxzTYpoWcKhFG2egECCcth4WcglBXg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 102ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:29 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YdkP7m49d187UXjc6nwwHSzvYbdCdoZhLEP2srYVdnotrshSCyaG1244AGsF2RnF+y1l3L6MEq0WRyeCfMRSPg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YdkP7m49d187UXjc6nwwHSzvYbdCdoZhLEP2srYVdnotrshSCyaG1244AGsF2RnF+y1l3L6MEq0WRyeCfMRSPg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 80ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:31 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aI033TzntSStpr26PxpTANFVVcv1ahe5FcZqJyrgQa0k+vBhWfxErPjPxQ3Qv3rYBpdRoAmQg3UvwrsX4DFl6Q==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aI033TzntSStpr26PxpTANFVVcv1ahe5FcZqJyrgQa0k+vBhWfxErPjPxQ3Qv3rYBpdRoAmQg3UvwrsX4DFl6Q==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 83ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:32 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gBIDPOaeFow5T4hIYTGiECRsR/GIW2hkNpU70ttOBCfMZcSAg4XnBGwm8P+OlIvI865DmnSh/KgMkeriEZ8gYw==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gBIDPOaeFow5T4hIYTGiECRsR/GIW2hkNpU70ttOBCfMZcSAg4XnBGwm8P+OlIvI865DmnSh/KgMkeriEZ8gYw==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 79ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:33 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qKewPu4wOa3KWXuI3lbwZgSi28Q1AkGVdAEOzlRJHvXk0HeCiyvIJZ8wAz8x89m+02Dfr8n41VlOBd/+npg6sQ==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qKewPu4wOa3KWXuI3lbwZgSi28Q1AkGVdAEOzlRJHvXk0HeCiyvIJZ8wAz8x89m+02Dfr8n41VlOBd/+npg6sQ==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 79ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:34 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUBoKDwXEGcx92sPe8AOXTeUdW7Qb4d+HOv77SQT1DdNN6+UWQzh72SeE7iUZSeF4FZxBSyVE7Im7yrd7sLwcw==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUBoKDwXEGcx92sPe8AOXTeUdW7Qb4d+HOv77SQT1DdNN6+UWQzh72SeE7iUZSeF4FZxBSyVE7Im7yrd7sLwcw==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:34 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ly0865UYFAWlMVAAU80Oaxf/gs9yVtuxSUGbFOLv8CuK3NPy0+R2EP9vffu6h3he536YMEzz6L/IddcmVqbhA==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ly0865UYFAWlMVAAU80Oaxf/gs9yVtuxSUGbFOLv8CuK3NPy0+R2EP9vffu6h3he536YMEzz6L/IddcmVqbhA==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 78ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:35 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u3zuCFPsQIP+ghA3ogrKFP9nWCpb1dKmJdHB89kQwIL3Cym0NvexC6vraIBNr+PMKKVcQacvRmof1RDDE8Hkxg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u3zuCFPsQIP+ghA3ogrKFP9nWCpb1dKmJdHB89kQwIL3Cym0NvexC6vraIBNr+PMKKVcQacvRmof1RDDE8Hkxg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 108ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2019-01-23 11:14:36 +0800
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:38 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eXFDCT5/OaxaZDWgQocwIXFMpznFMM6QfC6D0VT63kw1BoS1W2TIJA8NTRetIhn5po6jUjnKWlxGKlLhniv6CA==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eXFDCT5/OaxaZDWgQocwIXFMpznFMM6QfC6D0VT63kw1BoS1W2TIJA8NTRetIhn5po6jUjnKWlxGKlLhniv6CA==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:39 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aTBjzS9WnajgGG1dUee7cePOqkvLLYOLYq2NWWGMOmQlR6RxSk1sILVxFeq+QpKpNAyuIDfXF0dYqVxpq10eIA==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aTBjzS9WnajgGG1dUee7cePOqkvLLYOLYq2NWWGMOmQlR6RxSk1sILVxFeq+QpKpNAyuIDfXF0dYqVxpq10eIA==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 79ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:40 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QxvCWRqdmMdJRM1N+OnNQIMMDbzUL2PsmNvw2rftt9UPbAXlf4ZpTxwttfoXTOSYVM4J1yjV9yCi3yHqfTyTkQ==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QxvCWRqdmMdJRM1N+OnNQIMMDbzUL2PsmNvw2rftt9UPbAXlf4ZpTxwttfoXTOSYVM4J1yjV9yCi3yHqfTyTkQ==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 83ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:14:41 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xFEhy2b7iiDo/XNgsV7AIQ/+aNe4lV0YT0vpxmF9s9aIJuZ3A+B7qL2UC9de++n52DxsvERvydR1Tzj2q6yXkg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xFEhy2b7iiDo/XNgsV7AIQ/+aNe4lV0YT0vpxmF9s9aIJuZ3A+B7qL2UC9de++n52DxsvERvydR1Tzj2q6yXkg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 81ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:15:13 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (5.9ms)
+Completed 200 OK in 79ms (Views: 73.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:15:13 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:15:13 +0800
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 11:15:16 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-23 11:15:22 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j6JbR+FCp91VeV9cOEldATR0GheOjBM0DNB8ZUlPo7/D1Zz7hFlWVQAQJ+vX7HTZ47YefHJ2h/g21K1Vg56H+w==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"注   册"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '222@11.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('222@11.com', '$2a$10$oEIc/bXEQwSbolrP926GcudrB/k0S0UHP8K1Q9H6j19YlpRNeAh5C', '2019-01-23 03:15:22', '2019-01-23 03:15:22')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2019-01-23 03:15:22', `last_sign_in_at` = '2019-01-23 03:15:22', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 1[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 97ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:15:22 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (4.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:15:23 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:15:23 +0800
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-23 11:15:27 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ge+TAfZnOXF9hMyd/Zlf9xFG0F8V4DkfnItM+9NgzGvNmFS9k3zI+SjttCoSPHYvxoTUNOkardOmj53LGbHoLw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:15:27 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (4.6ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:15:27 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:15:27 +0800
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:15:30 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:15:32 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fY+7DWA3fO+aNZ735ksqjx3WKNttVtKaFlrRS6fwqs5spczsdm7BoBmOjhXLasFwe/w6TmkG02DtLiDO5j8+ZQ==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-01-23 03:15:32', `sign_in_count` = 2, `updated_at` = '2019-01-23 03:15:32' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:15:32 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.1ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (5.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:15:32 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:15:32 +0800
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:15:51 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:16:47 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:16:49 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:16:49 +0800
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-23 11:16:49 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:16:49 +0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2019-01-23 11:16:49 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:16:53 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.7ms)
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (3.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:16:53 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:16:53 +0800
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-23 11:16:55 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NcRRP3j8H8XDDOh9yT8JHnwB/eArNUCcNTraVSYISfOp61d5xiVITIbpCsj4Hcmcvyj6j+/HaTQBb7+GgBKf9w=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:16:55 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.7ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (4.0ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:16:55 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:16:55 +0800
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:16:57 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:16:58 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BnGtXdKQcnhnnnOn/OaYXqPD0DgrglqZb263pW3SRcxL1w0rFKp4EDBj34n6se1uW1VHnof7dGTXPBiRJ8LmCg==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-01-23 03:16:58', `last_sign_in_at` = '2019-01-23 03:15:32', `sign_in_count` = 3, `updated_at` = '2019-01-23 03:16:58' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:16:58 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (4.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:16:58 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:16:58 +0800
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:16:59 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users" for 127.0.0.1 at 2019-01-23 11:17:09 +0800
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7/Ahb2cN1kJYNfFKPZwfO75Plkf8tla9wEW1tpnWM9hBxLf8fU8rpEmMgDcc7aXGMswwk5R7YbJm8aWFnu0FmA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:17:09 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (5.6ms)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:17:09 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:17:09 +0800
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:18:49 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 11:18:50 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2o2R0NFv/UlTntTWOfyJaSwaM9D3jZHcT9UOGeKliqzPSo4evGBV8DM3PEUMGlbhUH++ow6KVTMWOsZbirIZQ==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2o2R0NFv/UlTntTWOfyJaSwaM9D3jZHcT9UOGeKliqzPSo4evGBV8DM3PEUMGlbhUH++ow6KVTMWOsZbirIZQ==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 81ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 11:18:54 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-23 11:18:57 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kHivU54UiuWY0i//ZR8x8hSxtYXmYD1gC1v8Xtk/sId4L7Msp6C0R31QiF0pyKqMNUAjsCmEInO2PEN/0J/uyA==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"注   册"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '222@11.com' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('222@11.com', '$2a$10$FNX6V.MuLG.SBLSUlwgmueyP27MoIy903fHOEOfG38d.L9H6JqMBG', '2019-01-23 03:18:57', '2019-01-23 03:18:57')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2019-01-23 03:18:57', `last_sign_in_at` = '2019-01-23 03:18:57', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 2[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 88ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:18:57 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (5.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 95ms (Views: 90.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:18:58 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:18:58 +0800
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:19:09 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:20:58 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-23 11:20:58 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:20:58 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:20:58 +0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2019-01-23 11:20:58 +0800
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:21:23 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-23 11:21:23 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:23 +0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:23 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:23 +0800
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:21:35 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-23 11:21:35 +0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:35 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:35 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:35 +0800
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:21:37 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-23 11:21:37 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:37 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:37 +0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:37 +0800
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:21:58 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:58 +0800
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-23 11:21:58 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:58 +0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2019-01-23 11:21:58 +0800
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 11:23:30 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-01-23 11:23:30 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 11:23:30 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 11:23:30 +0800
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2019-01-23 11:23:30 +0800
+Started PUT "/users" for 127.0.0.1 at 2019-01-23 11:23:33 +0800
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IecqGzbmsLs3kHaAfMvCdakcb384NLlbhBzj/5ASmbPJsDZkD1KOGdIS0SIwHFkLiO35SvfQpkg5e1zembLH/A==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"确认修改"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 247ms (Views: 35.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-23 11:23:41 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GCxK/wLXX4oRBY9RAtQlIDOz1cNu919Pvvi8aTd4JArwe1aAO2NhKPSHKPNOA75eEkJD9qETQFwDnwNIPth6RQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:23:41 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.1ms)
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (5.8ms)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 11:23:41 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 11:23:41 +0800

@@ -40,7 +40,7 @@
     <!-- plugin and theme output with wp_head() -->
 
     <!-- This site is optimized with the Yoast WordPress SEO plugin v1.3.4.1 - http://yoast.com/wordpress/seo/ -->
-    
+
     <!-- / Yoast WordPress SEO plugin. -->
 
     <!-- <link rel='stylesheet' id='flick-css'  href='https://inspirythemes.com/wp-content/plugins/mailchimp//css/flick/flick.css?ver=3.5' type='text/css' media='all' />
@@ -303,10 +303,6 @@
                   </ul>
                 </li>
                 <li><a href="<%= homeland.new_topic_path %>">新建帖子</a></li>
-<<<<<<< HEAD
-                <li><a href="/users/sign_in">登录</a></li>
-                <li><a href="/users/sign_up">注册</a></li>
-=======
                 <% if current_user %>
                   <li><%= link_to('登出', destroy_session_path(:user), :method => :delete) %></li>
                   <li><%= link_to('修改密码', edit_registration_path(:user)) %></li>
@@ -314,7 +310,6 @@
                   <li><%= link_to('注册', new_registration_path(:user)) %></li>
                   <li><%= link_to('登入', new_session_path(:user)) %></li>
                 <% end %>
->>>>>>> origin/stry
               </ul>
             </div>
           </nav>
