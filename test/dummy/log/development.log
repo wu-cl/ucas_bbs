@@ -40479,3 +40479,1226 @@ Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 00:04:17 
 Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 00:04:17 -0800
 Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 00:04:18 -0800
 >>>>>>> origin/letsrock
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:38:52 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (4.8ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (16.8ms)
+Completed 200 OK in 534ms (Views: 470.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 16:38:53 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.6ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (8.7ms)
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 16:39:01 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.3ms)
+  [1m[36mHomeland::Topic Load (1.0ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (6.4ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 16:39:03 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 16:39:04 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 16:39:04 +0800
+Started GET "/nodes" for 127.0.0.1 at 2019-01-23 16:39:07 +0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.9ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (2.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/_node.html.erb [7 times] (37.4ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (50.0ms)
+Completed 200 OK in 96ms (Views: 85.8ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:59:22 +0800
+Processing by Homeland::TopicsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `first' for #<Proc:0x007fd0f10d23b0>):
+  
+/home/wcl/Desktop/ruby_rails/ucas_bbs/app/models/homeland/topic.rb:17:in `<class:Topic>'
+/home/wcl/Desktop/ruby_rails/ucas_bbs/app/models/homeland/topic.rb:2:in `<module:Homeland>'
+/home/wcl/Desktop/ruby_rails/ucas_bbs/app/models/homeland/topic.rb:1:in `<top (required)>'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:478:in `load'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:478:in `block in load_file'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:663:in `new_constants_in'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:477:in `load_file'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:375:in `block in require_or_load'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:37:in `block in load_interlock'
+activesupport (5.0.7.1) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+activesupport (5.0.7.1) lib/active_support/concurrency/share_lock.rb:150:in `exclusive'
+activesupport (5.0.7.1) lib/active_support/dependencies/interlock.rb:11:in `loading'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:37:in `load_interlock'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:358:in `require_or_load'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:512:in `load_missing_constant'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:203:in `const_missing'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:544:in `load_missing_constant'
+activesupport (5.0.7.1) lib/active_support/dependencies.rb:203:in `const_missing'
+/home/wcl/Desktop/ruby_rails/ucas_bbs/app/controllers/homeland/topics_controller.rb:9:in `index'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.0ms)
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Processing by Homeland::TopicsController#index as HTML
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL LIMIT 10 OFFSET 0[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (4.3ms)
+Completed 200 OK in 50ms (Views: 40.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:01:15 +0800
+Started GET "/t/new" for 127.0.0.1 at 2019-01-23 17:01:30 +0800
+Processing by Homeland::TopicsController#new as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 17:01:30 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 48ms (Views: 25.5ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 17:01:32 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GlhxqKEw6TSh+93bYYcsY26HgFjbLcZEzJEuwLp6DON2rOxtkZTvUw9yWbeSf9p8K0mxCjzn8VcK48t5Gj0DOQ==", "user"=>{"email"=>"222@11.com", "password"=>"[FILTERED]"}, "commit"=>"登   陆"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '222@11.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-01-23 09:01:32', `sign_in_count` = 2, `updated_at` = '2019-01-23 09:01:32' WHERE `users`.`id` = 2[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/new
+Completed 302 Found in 117ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/t/new" for 127.0.0.1 at 2019-01-23 17:01:32 +0800
+Processing by Homeland::TopicsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` IS NULL LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes`[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_form.html.erb (35.2ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application (37.0ms)
+Completed 200 OK in 121ms (Views: 102.1ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/t" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Processing by Homeland::TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tTAr0h60HweMpfNa5IQYQUsH4UCWxgN3fGdpfQuamz/KaHRO5hH3Cgte4daDmni7Mw8jepUWVM/dg6CGvzMguQ==", "topic"=>{"node_id"=>"1", "title"=>"1", "body"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `homeland_topics` (`node_id`, `user_id`, `title`, `body`, `body_html`, `last_active_mark`, `created_at`, `updated_at`) VALUES (1, 2, '1', '1', '<p>1</p>\n', 1548234097, '2019-01-23 09:01:37', '2019-01-23 09:01:37')[0m
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE `homeland_nodes` SET `topics_count` = COALESCE(`topics_count`, 0) + 1 WHERE `homeland_nodes`.`id` = 1[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/1
+Completed 302 Found in 371ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/t/1" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/replies/_topic_body.html.erb (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Reply Load (0.7ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 1 LIMIT 10 OFFSET 0[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_reply_form.html.erb (9.4ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application (25.2ms)
+Completed 200 OK in 79ms (Views: 62.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 17:01:37 +0800
+Started GET "/t/new" for 127.0.0.1 at 2019-01-23 17:01:39 +0800
+Processing by Homeland::TopicsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` IS NULL LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.7ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes`[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_form.html.erb (4.5ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application (7.4ms)
+Completed 200 OK in 53ms (Views: 46.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/t" for 127.0.0.1 at 2019-01-23 17:01:43 +0800
+Processing by Homeland::TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F1uL02z26uw7ToFzmoTFygrL+fDw3buJauiPYeIxFiVoA9RPlFMC4by1k//9mqUwcsM7yvMN7DHLDEaaVpitow==", "topic"=>{"node_id"=>"1", "title"=>"2", "body"=>"2"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `homeland_topics` (`node_id`, `user_id`, `title`, `body`, `body_html`, `last_active_mark`, `created_at`, `updated_at`) VALUES (1, 2, '2', '2', '<p>2</p>\n', 1548234103, '2019-01-23 09:01:43', '2019-01-23 09:01:43')[0m
+  [1m[36mHomeland::Node Load (2.9ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `homeland_nodes` SET `topics_count` = COALESCE(`topics_count`, 0) + 1 WHERE `homeland_nodes`.`id` = 1[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/2
+Completed 302 Found in 55ms (ActiveRecord: 42.9ms)
+
+
+Started GET "/t/2" for 127.0.0.1 at 2019-01-23 17:01:43 +0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 2 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/replies/_topic_body.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Reply Load (0.4ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 2 LIMIT 10 OFFSET 0[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_reply_form.html.erb (1.8ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application (11.6ms)
+Completed 200 OK in 53ms (Views: 47.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 17:01:44 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:01:44 +0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 17:01:44 +0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 17:01:44 +0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 17:01:44 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:01:44 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:01:44 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:01:44 +0800
+Started GET "/t/new" for 127.0.0.1 at 2019-01-23 17:01:45 +0800
+Processing by Homeland::TopicsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` IS NULL LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes`[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_form.html.erb (5.6ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/new.html.erb within layouts/homeland/application (7.5ms)
+Completed 200 OK in 49ms (Views: 41.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/t" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Processing by Homeland::TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g7ZLkL0C136Kvu5aaSMkkPhfoAhvI4M0KTJh1pTQ/JD87hQMRac/cw1F/NYOPURqgFdiMmzz1IyI1qgtIHlHFg==", "topic"=>{"node_id"=>"1", "title"=>"3", "body"=>"3"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_topics` (`node_id`, `user_id`, `title`, `body`, `body_html`, `last_active_mark`, `created_at`, `updated_at`) VALUES (1, 2, '3', '3', '<p>3</p>\n', 1548234109, '2019-01-23 09:01:49', '2019-01-23 09:01:49')[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE `homeland_nodes` SET `topics_count` = COALESCE(`topics_count`, 0) + 1 WHERE `homeland_nodes`.`id` = 1[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/t/3
+Completed 302 Found in 34ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/t/3" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Processing by Homeland::TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`id` = 3 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application
+  [1m[36mHomeland::Node Load (0.8ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/replies/_topic_body.html.erb (0.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Reply Load (0.8ms)[0m  [1m[34mSELECT  `homeland_replies`.* FROM `homeland_replies` WHERE `homeland_replies`.`deleted_at` IS NULL AND `homeland_replies`.`topic_id` = 3 LIMIT 10 OFFSET 0[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_reply_form.html.erb (2.1ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/show.html.erb within layouts/homeland/application (17.5ms)
+Completed 200 OK in 58ms (Views: 51.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/homeland/standard-large.png" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:01:49 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:01:50 +0800
+Processing by Homeland::TopicsController#index as HTML
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 1[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `includes' for #<Homeland::Topic:0x007fd0dc646a68>):
+  
+activemodel (5.0.7.1) lib/active_model/attribute_methods.rb:433:in `method_missing'
+/home/wcl/Desktop/ruby_rails/ucas_bbs/app/controllers/homeland/topics_controller.rb:9:in `index'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:02:02 +0800
+Processing by Homeland::TopicsController#index as HTML
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `includes' for #<Homeland::Topic:0x007fd0e41532d8>):
+  
+activemodel (5.0.7.1) lib/active_model/attribute_methods.rb:433:in `method_missing'
+/home/wcl/Desktop/ruby_rails/ucas_bbs/app/controllers/homeland/topics_controller.rb:9:in `index'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.2ms)
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:02:03 +0800
+Processing by Homeland::TopicsController#index as HTML
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 1[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `includes' for #<Homeland::Topic:0x007fd0e88b5270>):
+  
+activemodel (5.0.7.1) lib/active_model/attribute_methods.rb:433:in `method_missing'
+/home/wcl/Desktop/ruby_rails/ucas_bbs/app/controllers/homeland/topics_controller.rb:9:in `index'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (24.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.9ms)
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (18.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (11.6ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (63.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 116ms (Views: 103.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:04:20 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:04:21 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:12:19 +0800
+Processing by Homeland::TopicsController#index as HTML
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 1 OFFSET 0[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.5ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Node Load (0.3ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (20.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb (4.3ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (51.7ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Homeland::Topic:0x007fd0e40d70e8>):
+    76:   </div>
+    77: </div>
+    78: 
+    79: <%= homeland_paginate @topics %>
+  
+activemodel (5.0.7.1) lib/active_model/attribute_methods.rb:433:in `method_missing'
+will_paginate (3.1.6) lib/will_paginate/view_helpers.rb:73:in `will_paginate'
+will_paginate (3.1.6) lib/will_paginate/view_helpers/action_view.rb:33:in `will_paginate'
+/home/wcl/Desktop/ruby_rails/ucas_bbs/lib/homeland/action_view/will_paginate.rb:12:in `homeland_paginate'
+/home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb:79:in `__home_wcl__esktop_ruby_rails_ucas_bbs_app_views_homeland_topics_index_html_erb__2195339105230758143_70267613093500'
+actionview (5.0.7.1) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.1) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.7.1) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.1) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.7.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.7.1) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.7.1) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.7.1) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.7.1) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+actionpack (5.0.7.1) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.1ms)
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:15:40 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (1.2ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (16.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (6.7ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (50.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 108ms (Views: 97.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:15:41 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:15:42 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:16:02 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 5 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (20.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (35.7ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (94.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 184ms (Views: 167.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:16:03 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.2ms)
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 1 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (17.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (2.7ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL[0m
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (54.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 113ms (Views: 99.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:16:10 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:16:12 +0800
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.7ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Node Load (3.7ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (43.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (14.6ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (92.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 174ms (Views: 158.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/bootstrap5152.self-b8346fcba6b12934621c84a0b5b9882f6038fe074db170bd7a7b4bc467b22eb7.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/main5152.self-04b31bc09972441bde694b23d280b57692cc28217624e98bd8d8c6dee2808d22.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:16:25 +0800
+Started GET "/c/1" for 127.0.0.1 at 2019-01-23 17:16:34 +0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (3.0ms)
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (2.9ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (17.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 64ms (Views: 56.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:16:34 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:16:34 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:16:34 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:16:34 +0800
+Started GET "/c/1" for 127.0.0.1 at 2019-01-23 17:16:37 +0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (3.1ms)
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (2.3ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (17.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 61ms (Views: 55.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:16:37 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:16:37 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:16:37 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:16:37 +0800
+Started GET "/nodes" for 127.0.0.1 at 2019-01-23 17:19:35 +0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/_node.html.erb [7 times] (31.2ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (37.1ms)
+Completed 200 OK in 88ms (Views: 81.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/c/1" for 127.0.0.1 at 2019-01-23 17:19:37 +0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.8ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (3.2ms)
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (2.2ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (17.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:19:37 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:19:37 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:19:37 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:19:37 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:19:38 +0800
+Started GET "/nodes" for 127.0.0.1 at 2019-01-23 17:19:43 +0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.4ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (1.0ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/_node.html.erb [7 times] (26.9ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (31.9ms)
+Completed 200 OK in 81ms (Views: 74.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 17:19:47 +0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.2ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (12.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (10.6ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (37.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 96ms (Views: 87.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:19:47 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:19:47 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:19:47 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:19:47 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:19:48 +0800
+Started GET "/nodes" for 127.0.0.1 at 2019-01-23 17:22:03 +0800
+Processing by Homeland::NodesController#index as HTML
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.3ms)[0m  [1m[34mSELECT `homeland_nodes`.* FROM `homeland_nodes` ORDER BY sort desc[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 2 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 3 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 4 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY id desc LIMIT 3[0m
+  [1m[36mHomeland::Topic Load (0.5ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 7 ORDER BY id desc LIMIT 3[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/_node.html.erb [7 times] (26.2ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/nodes/index.html.erb within layouts/homeland/application (31.3ms)
+Completed 200 OK in 128ms (Views: 121.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/c/1" for 127.0.0.1 at 2019-01-23 17:22:04 +0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 1 LIMIT 1[0m
+  Rendering /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (0.6ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 1 ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (3.2ms)
+  Rendered collection of /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/_topic.html.erb [3 times] (2.1ms)
+  Rendered /home/wcl/Desktop/ruby_rails/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (19.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 63.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-23 17:22:04 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:22:04 +0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-23 17:22:04 +0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-23 17:22:04 +0800
+Started GET "/assets/homeland/like.png" for 127.0.0.1 at 2019-01-23 17:22:06 +0800
