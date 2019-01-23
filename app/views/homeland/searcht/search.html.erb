@@ -9,13 +9,14 @@
         <%= render :partial => "homeland/searcht/search_bar" %>
       </div>
     </div> 
-
-    <br>
+  </div>
+</div>
+<div class="container">
     <% if @query_string.blank? %>
         <h4 class="search-info-title">搜索信息不能为空，请输入关键字搜索</h4>
     <% elsif @searcht.blank? %>
         <br>
-        <h4 class="search-info-title">亲，没有搜索到相关工作信息哦，要不换个关键词试试？</h4>
+        <h4 class="search-info-title">没有搜索到相关信息，换个关键词试试？</h4>
     <% else %>
         <h4 class="search-info-title"> 有关"<%= @query_string %>"的工作信息 </h4>
         <hr>
@@ -29,6 +30,7 @@
              <p><i class="fa fa-street-view" aria-hidden="true"></i> <%= node_tag(st.node) %></p>
              <p><i class="fa fa-clock-o" aria-hidden="true"></i> <%= st.replies_count %></p>
              <p><span class="label label-success"><%= st.replies_count %></span></p>
+             <p><%= st.body[0,3] =%></p>
              <hr>
            </div>
           <% end %>
@@ -39,5 +41,4 @@
         </div>
         <% end %>
     <% end %>
-  </div>
 </div>
