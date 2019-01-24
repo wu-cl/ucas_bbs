@@ -54,35 +54,37 @@
         <h4 class="search-info-title">没有搜索到相关信息，换个关键词试试？</h4>
     <% else %>
         <h4 class="search-info-title">共找到<%= @searcht.length %>个帖子</h4>
+    
+
+    <% @searcht.each do |st| %>
+      <article class="format-standard type-post hentry clearfix">
+
+      <header class="clearfix">
+
+              <h3 class="post-title">
+                <%= link_to st.title, homeland.topic_path(st) %>
+              </h3>
+
+              <div class="post-meta clearfix">
+                      <span class="date"><%= timeago st.activity_at %></span>
+                      <span class="category"><%= node_tag(st.node) %></span>
+                      <span class="comments"><%= st.replies_count %> Comments</a></span>
+                      <span class="poster"><%= user_name_tag(st) %></span>
+              </div><!-- end of post meta -->
+
+      </header>
+
+      <p><%= st.body[0,100] %>......</p>
+
+    </article>
     <% end %>
 
-<% @searcht.each do |st| %>
-  <article class="format-standard type-post hentry clearfix">
+    <% if @searcht.present? %>
+            <div class="text-center">
+              <%= will_paginate(@searcht, renderer: BootstrapPagination::Rails) %>
+            </div>
+    <% end %>
 
-  <header class="clearfix">
-
-          <h3 class="post-title">
-            <%= link_to st.title, homeland.topic_path(st) %>
-          </h3>
-
-          <div class="post-meta clearfix">
-                  <span class="date"><%= timeago st.activity_at %></span>
-                  <span class="category"><%= node_tag(st.node) %></span>
-                  <span class="comments"><%= st.replies_count %> Comments</a></span>
-                  <span class="poster"><%= user_name_tag(st) %></span>
-          </div><!-- end of post meta -->
-
-  </header>
-
-  <p><%= st.body[0,100] %>......</p>
-
-</article>
-<% end %>
-
-<% if @searcht.present? %>
-        <div class="text-center">
-          <%= will_paginate(@searcht, renderer: BootstrapPagination::Rails) %>
-        </div>
 <% end %>
 
 </div>
