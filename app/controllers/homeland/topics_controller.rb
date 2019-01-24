@@ -6,13 +6,8 @@ module Homeland
     end
 
     def index
-<<<<<<< HEAD
       @topics = Topic.latest.includes(:user).page(params[:page]).limit(10).all
       @topics_reply = Topic.reply_index.includes(:user).page(params[:page]).limit(10).all
-=======
-      @topics = Topic.latest.includes(:user).page(params[:page]).limit(15).all
-      @topics_reply = Topic.reply_index.includes(:user).page(params[:page]).limit(15).all
->>>>>>> origin/beautify
       set_seo_meta(t("homeland.nav.latest"))
     end
 
