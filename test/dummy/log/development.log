@@ -11219,3 +11219,104 @@ Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-24 00:36:44
 Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
 Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
 Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/ucas/ucas_bbs/test/dummy/config/environment.rb:6)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (5.5ms)[0m  [1m[35mDROP TABLE `homeland_nodes` CASCADE[0m
+  [1m[35m (31.5ms)[0m  [1m[35mCREATE TABLE `homeland_nodes` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `description` varchar(255), `color` varchar(255), `sort` int DEFAULT 0 NOT NULL, `topics_count` int DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_homeland_nodes_on_sort` USING btree (`sort`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE `homeland_replies` CASCADE[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE `homeland_replies` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `topic_id` int, `body` text, `body_html` text, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `reply_to_id` int,  INDEX `index_homeland_replies_on_reply_to_id` USING btree (`reply_to_id`),  INDEX `index_homeland_replies_on_topic_id` USING btree (`topic_id`),  INDEX `index_homeland_replies_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (5.3ms)[0m  [1m[35mDROP TABLE `homeland_topics` CASCADE[0m
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE `homeland_topics` (`id` int AUTO_INCREMENT PRIMARY KEY, `node_id` int NOT NULL, `user_id` int NOT NULL, `title` varchar(255) NOT NULL, `body` text, `body_html` text, `last_reply_id` int, `last_reply_user_id` int, `last_active_mark` int DEFAULT 0 NOT NULL, `replied_at` datetime, `replies_count` int DEFAULT 0 NOT NULL, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_homeland_topics_on_deleted_at` USING btree (`deleted_at`),  INDEX `index_homeland_topics_on_last_active_mark_and_deleted_at` USING btree (`last_active_mark`, `deleted_at`),  INDEX `index_homeland_topics_on_node_id_and_deleted_at` USING btree (`node_id`, `deleted_at`),  INDEX `index_homeland_topics_on_node_id_and_last_active_mark` USING btree (`node_id`, `last_active_mark`),  INDEX `index_homeland_topics_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (5.6ms)[0m  [1m[35mDROP TABLE `users` CASCADE[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, UNIQUE INDEX `index_users_on_email` USING btree (`email`), UNIQUE INDEX `index_users_on_reset_password_token` USING btree (`reset_password_token`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.2ms)[0m  [1m[35mDROP TABLE `homeland_nodes` CASCADE[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE `homeland_nodes` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `description` varchar(255), `color` varchar(255), `sort` int DEFAULT 0 NOT NULL, `topics_count` int DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_homeland_nodes_on_sort` USING btree (`sort`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (5.2ms)[0m  [1m[35mDROP TABLE `homeland_replies` CASCADE[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE `homeland_replies` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `topic_id` int, `body` text, `body_html` text, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `reply_to_id` int,  INDEX `index_homeland_replies_on_reply_to_id` USING btree (`reply_to_id`),  INDEX `index_homeland_replies_on_topic_id` USING btree (`topic_id`),  INDEX `index_homeland_replies_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE `homeland_topics` CASCADE[0m
+  [1m[35m (80.4ms)[0m  [1m[35mCREATE TABLE `homeland_topics` (`id` int AUTO_INCREMENT PRIMARY KEY, `node_id` int NOT NULL, `user_id` int NOT NULL, `title` varchar(255) NOT NULL, `body` text, `body_html` text, `last_reply_id` int, `last_reply_user_id` int, `last_active_mark` int DEFAULT 0 NOT NULL, `replied_at` datetime, `replies_count` int DEFAULT 0 NOT NULL, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_homeland_topics_on_deleted_at` USING btree (`deleted_at`),  INDEX `index_homeland_topics_on_last_active_mark_and_deleted_at` USING btree (`last_active_mark`, `deleted_at`),  INDEX `index_homeland_topics_on_node_id_and_deleted_at` USING btree (`node_id`, `deleted_at`),  INDEX `index_homeland_topics_on_node_id_and_last_active_mark` USING btree (`node_id`, `last_active_mark`),  INDEX `index_homeland_topics_on_user_id` USING btree (`user_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE `users` CASCADE[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, UNIQUE INDEX `index_users_on_email` USING btree (`email`), UNIQUE INDEX `index_users_on_reset_password_token` USING btree (`reset_password_token`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (23.2ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'development', `updated_at` = '2019-01-24 15:32:15' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'test' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (20.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `homeland_nodes`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (34.7ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '课程资源共享' LIMIT 1[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('课程资源共享', '课程资源共享', '2019-01-24 15:32:15', '2019-01-24 15:32:15')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (24.7ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '疑难解答' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('疑难解答', '疑难解答', '2019-01-24 15:32:15', '2019-01-24 15:32:15')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '课程评价' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('课程评价', '课程评价', '2019-01-24 15:32:15', '2019-01-24 15:32:15')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '偷偷吐槽' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('偷偷吐槽', '偷偷吐槽', '2019-01-24 15:32:16', '2019-01-24 15:32:16')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '内推交流' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('内推交流', '内推交流', '2019-01-24 15:32:16', '2019-01-24 15:32:16')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '编程技术' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('编程技术', '编程技术', '2019-01-24 15:32:16', '2019-01-24 15:32:16')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHomeland::Node Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `homeland_nodes` WHERE `homeland_nodes`.`name` = BINARY '项目组队' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `homeland_nodes` (`name`, `description`, `created_at`, `updated_at`) VALUES ('项目组队', '项目组队', '2019-01-24 15:32:16', '2019-01-24 15:32:16')[0m
+  [1m[35m (33.4ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/ucas/ucas_bbs/test/dummy/config/environment.rb:6)
+Started GET "/" for 127.0.0.1 at 2019-01-24 07:32:34 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (5.5ms)
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (29.9ms)
+Completed 200 OK in 4825ms (Views: 4752.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/homeland/style.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/bootstrap5152.self-e2322b8ac14f4ff458c790c9b6072a3c7ba206099b8bda4cfe31d6d9e54bbcb1.css?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/prettyphoto/jquery.prettyPhotoaeb9.self-f025aae7ac7031de085792b2b0741b74c6301f4894ba5cfc39e101dd7c3564c3.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/blue-skin5152.self-8994c19faec491fa768377a729781770e3a3b1db3891d22dc5b622838e24a7c2.css?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/main5152.self-79e4592b2924db21d31f91c6a0d71adda183b6bbd889501a94f061c1365d0fd3.css?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/responsive5152.self-bda2f5f130f77a29c24d292d0f73e11c2563f967041336b500ca9b175dd5503a.css?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/application.self-0676db7e4fc6ac3a4ade3658258feb3c077a787379b4350f9f012380a56d3ceb.css?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/tether.min.self-0f7273982332c089e22db1f93bc65fe71683bf2d9166be4616ac03c1d6c58501.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/bootstrap.min.self-7ef466d9e4a1de35084ed6cffed4e7f2d8a1931f9ccab3291d123244a9797a8c.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/jquery.liveSearchd5f7.self-0af97dc48bd73cb67562391208b10f874b5cfa20d994a2c087f29c525eef7465.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/jquery.easing.1.34e44.self-c85028b4485f3b7e91508aa9891cfeb41a8884efd87672715de3fa1ae2173948.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/jquery.timeago.self-52bd39d33bb2fe4000c180c04dc380406d27de0f57ea9cde61a473569402b221.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/jflickrfeed.self-49a94432d6330fe4637e72804c553a81ac8a1b347311765ba47b9a85909bd8be.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/jquery.validate.minfc6b.self-346e02e5150254dd37d4ef110233e8e6e6109f5cc3263b64c8208d13f628584c.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/custom5152.self-86a53a4de7677af6ed79225a25962abfeeb79f2dc4760fd157d0ab571a3af718.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/application.self-c0e83ce464015acbb0a543917ad43d33c6649a6c984acc2cc90e08202530ac9f.js?body=1" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-24 07:32:39 -0800
