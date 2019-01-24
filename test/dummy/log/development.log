@@ -11101,3 +11101,121 @@ Started GET "/assets/homeland/calendar-icon.png" for 127.0.0.1 at 2019-01-24 00:
 Started GET "/assets/homeland/user.png" for 127.0.0.1 at 2019-01-24 00:24:37 -0800
 Started GET "/assets/homeland/category-icon.png" for 127.0.0.1 at 2019-01-24 00:24:37 -0800
 Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-24 00:24:37 -0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/serlytus/ucas/ucas_bbs/test/dummy/config/environment.rb:6)
+Started GET "/" for 127.0.0.1 at 2019-01-24 00:36:33 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (7.5ms)
+  [1m[36mHomeland::Topic Load (1.3ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (43.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (14.9ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (162.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 871ms (Views: 735.4ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-24 00:36:35 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-24 00:36:35 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-24 00:36:35 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-24 00:36:35 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-24 00:36:35 -0800
+Started GET "/c/5" for 127.0.0.1 at 2019-01-24 00:36:36 -0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (2.2ms)
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 5 ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (5.8ms)
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (5.8ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (34.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 257ms (Views: 232.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-24 00:36:37 -0800
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-24 00:36:37 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-24 00:36:37 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-24 00:36:37 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-24 00:36:37 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-24 00:36:40 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.9ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.4ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (9.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (9.7ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (35.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 152ms (Views: 144.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-24 00:36:40 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-24 00:36:40 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-24 00:36:40 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-24 00:36:40 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-24 00:36:40 -0800
+Started GET "/c/6" for 127.0.0.1 at 2019-01-24 00:36:42 -0800
+Processing by Homeland::TopicsController#node as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.0ms)
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.8ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL AND `homeland_topics`.`node_id` = 6 ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (2.0ms)
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [1 times] (5.0ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (27.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 176ms (Views: 161.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-24 00:36:42 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-24 00:36:42 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-24 00:36:42 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-24 00:36:42 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-24 00:36:42 -0800
+Started GET "/" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
+Processing by Homeland::TopicsController#index as HTML
+  Rendering /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/searcht/_search_bar.html.erb (1.1ms)
+  [1m[36mHomeland::Topic Load (0.7ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY last_active_mark desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Topic Load (0.6ms)[0m  [1m[34mSELECT  `homeland_topics`.* FROM `homeland_topics` WHERE `homeland_topics`.`deleted_at` IS NULL ORDER BY replies_count desc, id desc LIMIT 10 OFFSET 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[36mHomeland::Node Load (0.6ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m
+  [1m[36mHomeland::Node Load (0.5ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (10.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `homeland_nodes`.* FROM `homeland_nodes` WHERE `homeland_nodes`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered collection of /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/_topic.html.erb [2 times] (11.9ms)
+  Rendered /home/serlytus/ucas/ucas_bbs/app/views/homeland/topics/index.html.erb within layouts/homeland/application (37.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 287ms (Views: 279.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/homeland/blue-skin/blue-bg.jpg" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
+Started GET "/assets/homeland/standard.png" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
+Started GET "/assets/homeland/comment.png" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
+Started GET "/assets/homeland/support.png" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
+Started GET "/assets/homeland/li-arrow.png" for 127.0.0.1 at 2019-01-24 00:36:44 -0800
