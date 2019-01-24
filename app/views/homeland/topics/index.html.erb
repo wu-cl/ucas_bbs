@@ -13,6 +13,9 @@
       <div class="span8 page-content">
         <!-- Basic Home Page Template -->
         <div class="row separator">
+          <% if @node %>
+            <h3>当前板块:<%= @node.name %></h3>
+          <% end %>
           <section class="span4 articles-list">
             <h3>最热帖子</h3>
             <ul class="articles">
@@ -34,22 +37,21 @@
       <aside class="span4 page-sidebar">
         <section class="widget">
           <div class="support-widget">
-            <h3 class="title">Support</h3>
+            <h3 class="title">说明</h3>
             <p class="intro">
-              Need more support? If you did not found an answer, contact us for
-              further help.
+              您现在访问的是喔壳社区的alpha测试版本，我们会进行后续更新，敬请关注
             </p>
           </div>
         </section>
 
         <section class="widget">
           <div class="quick-links-widget">
-            <h3 class="title">Quick Links</h3>
+            <h3 class="title">快捷链接</h3>
             <ul id="menu-quick-links" class="menu clearfix">
-              <li><a href="index-2.html">Home</a></li>
-              <li><a href="articles-list.html">Articles List</a></li>
-              <li><a href="faq.html">FAQs</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="/c/6">编程技术</a></li>
+              <li><a href="/c/1">课程资源共享</a></li>
+              <li><a href="/c/5">内推交流</a></li>
+              <li><a href="/c/3">课程评价</a></li>
             </ul>
           </div>
         </section>

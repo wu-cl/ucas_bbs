@@ -32,6 +32,9 @@
 <section class="span6 articles-list">
   <h3><%= link_to node.name, homeland.node_topics_path(node) %></h3>
   <ul class="articles">
+    <% if node.topics.length == 0 %>
+      <p>本版块下目前还没有帖子</p>
+    <% end %>
     <% node.topics.recent.limit(3).each do |topic| %>
       <li class="article-entry standard">
         <h4><%= link_to topic.title, homeland.topic_path(topic) %></h4>

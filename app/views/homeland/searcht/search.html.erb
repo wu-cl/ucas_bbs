@@ -62,7 +62,8 @@
       <header class="clearfix">
 
               <h3 class="post-title">
-                <%= link_to st.title, homeland.topic_path(st) %>
+                <!-- <%= link_to st.title, homeland.topic_path(st) %> -->
+                <%= link_to(render_highlight_content(st,@query_string),homeland.topic_path(st)) %>
               </h3>
 
               <div class="post-meta clearfix">
