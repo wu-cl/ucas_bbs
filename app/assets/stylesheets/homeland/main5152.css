@@ -522,7 +522,7 @@ li.comment > article .avatar {
   font-size: 16px;
 }
 .articles-list > h3 a {
-  color: #3b4348;
+  color: #0ea07b;
 }
 .articles-list > h3 a:hover {
   color: #395996;
@@ -560,7 +560,7 @@ ul.articles li.article-entry:last-child {
   font-weight: 600;
 }
 .article-entry > h4 a {
-  color: #3b4348;
+  color: #41b3bb;
 }
 .article-entry > h4 a:hover {
   color: #395996;
@@ -583,6 +583,18 @@ ul.articles li.article-entry:last-child {
 .article-entry:hover .like-count {
   background: url("like.png") no-repeat 6px -22px;
   color: #395996;
+}
+
+.article-entry .comm {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  line-height: 18px;
+  font-weight: 600;
+  padding: 3px 5px 3px 20px;
+  border: 1px solid #f2f2f2;
+  border-bottom: none;
+  background: url("comment.png") no-repeat 3px 5px;
 }
 
 #footer .article-entry .like-count {
@@ -627,6 +639,10 @@ ul.articles li.article-entry:last-child {
 }
 .hentry .post-meta .comments {
   background: url("comment.png") no-repeat left center;
+}
+.hentry .post-meta .poster {
+  float:right;
+  background: url("user.png") no-repeat left center;
 }
 .hentry .post-meta .like-count {
   float: right;

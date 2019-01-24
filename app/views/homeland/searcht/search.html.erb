@@ -9,13 +9,14 @@
         <%= render :partial => "homeland/searcht/search_bar" %>
       </div>
     </div> 
-
-    <br>
+  </div>
+</div>
+<!-- <div class="container">
     <% if @query_string.blank? %>
         <h4 class="search-info-title">搜索信息不能为空，请输入关键字搜索</h4>
     <% elsif @searcht.blank? %>
         <br>
-        <h4 class="search-info-title">亲，没有搜索到相关工作信息哦，要不换个关键词试试？</h4>
+        <h4 class="search-info-title">没有搜索到相关信息，换个关键词试试？</h4>
     <% else %>
         <h4 class="search-info-title"> 有关"<%= @query_string %>"的工作信息 </h4>
         <hr>
@@ -24,11 +25,12 @@
 
           <% @searcht.each do |st| %>
            <div class="st-item">
-             <p><span><%= user_avatar_tag(st) %><span class="pull-right">更新于 <%= timeago st.activity_at %></span></p>
+             <p><span><%= user_name_tag(st) %><span class="pull-right">更新于 <%= timeago st.activity_at %></span></p>
              <h4><%= link_to st.title, homeland.topic_path(st) %></h4>
              <p><i class="fa fa-street-view" aria-hidden="true"></i> <%= node_tag(st.node) %></p>
              <p><i class="fa fa-clock-o" aria-hidden="true"></i> <%= st.replies_count %></p>
              <p><span class="label label-success"><%= st.replies_count %></span></p>
+             <p><%= st.body[0,100] %>......</p>
              <hr>
            </div>
           <% end %>
@@ -39,5 +41,51 @@
         </div>
         <% end %>
     <% end %>
-  </div>
+</div> -->
+
+<div class="page-container">
+                        <div class="container">
+                                <div class="row">
+<div class="span12 main-listing">
+    <% if @query_string.blank? %>
+        <h4 class="search-info-title">搜索信息不能为空，请输入关键字搜索</h4>
+    <% elsif @searcht.blank? %>
+        <br>
+        <h4 class="search-info-title">没有搜索到相关信息，换个关键词试试？</h4>
+    <% else %>
+        <h4 class="search-info-title">共找到<%= @searcht.length %>个帖子</h4>
+    <% end %>
+
+<% @searcht.each do |st| %>
+  <article class="format-standard type-post hentry clearfix">
+
+  <header class="clearfix">
+
+          <h3 class="post-title">
+            <%= link_to st.title, homeland.topic_path(st) %>
+          </h3>
+
+          <div class="post-meta clearfix">
+                  <span class="date"><%= timeago st.activity_at %></span>
+                  <span class="category"><%= node_tag(st.node) %></span>
+                  <span class="comments"><%= st.replies_count %> Comments</a></span>
+                  <span class="poster"><%= user_name_tag(st) %></span>
+          </div><!-- end of post meta -->
+
+  </header>
+
+  <p><%= st.body[0,100] %>......</p>
+
+</article>
+<% end %>
+
+<% if @searcht.present? %>
+        <div class="text-center">
+          <%= will_paginate(@searcht, renderer: BootstrapPagination::Rails) %>
+        </div>
+<% end %>
+
+</div>
+</div>
+</div>
 </div>

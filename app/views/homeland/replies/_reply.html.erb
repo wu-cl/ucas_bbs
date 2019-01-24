@@ -61,16 +61,13 @@ is_reply = reply.respond_to?(:reply_to_id)
                   <div class="markdown">
                     <%= raw reply.body_html %>
                   </div>
-                  <% puts reply.user_id %>
-                  <% puts current_user.id %>
                   <% if owner?(reply) %>
-                    <% puts '3.141592653' %>
-                    <div>
-                      <a href="<%= reply_url(reply) %>" data-method="DELETE" data-confirm="<%= t('homeland.are_you_sure_to_delete') %>" class="btn-opt"><i class="fa fa-trash"></i></a>
-                      <%= form_tag reply_url(reply), :method => :delete do %>
-                        <%= label_tag 'Delete' %>
-                        <%= submit_tag 'delete' %>
-                      <% end %>
+                    <div style="float:right">
+                      <!-- <%= form_tag reply_url(reply), :method => :delete, :class => "btn btn-danger btn-default" do %>
+                        delete
+                      <% end %> -->
+
+                      <a href="<%= is_reply ? reply_path(reply) : topic_path(reply) %>" data-method="DELETE" data-confirm="<%= t('homeland.are_you_sure_to_delete') %>" class="btn btn-danger btn-default">delete</a>
                     </div>
                     
                   <% else %>
